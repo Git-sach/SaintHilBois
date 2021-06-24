@@ -1,35 +1,42 @@
 <?php
 
-namespace app;
+use core\Config;
+use core\database\MysqlDatabase;
 
 class App{
 
-    const DB_NAME = 'SaintHilBois';
-    const DB_USER = 'root';
-    const DB_PASS = 'Escalademroc69&';
-    const DB_HOST = 'localhost';
+    public $title = "SaintHilBois";
+    private $db_instance;
+    private static $_instance;
 
-
-    private static $database;
-    private static $title = "SaintHilBois";
-
-    public static function getDb(){
-        if(self::$database === null){
-            self::$database = new Database(self::DB_NAME, self::DB_USER, self::DB_PASS, self::DB_HOST);
+    //singleton --> class a instancier une unique fois
+    public static function getInstance(){
+        if(is_null(self::$_instance)){
+            self::$_instance = new App();
         }
-        return self::$database;
+        return self::$_instance;
     }
 
-    public static function notFound(){   
-        header("HTTP/1.0 404 Not Found");
-        header('Location:index.php?p=404');
+    public static function load(){
+        session_start();
+        require ROOT . '/app/Autoloader.php';
+        app\Autoloader::register();
+        require ROOT . '/core/Autoloader.php';
+        core\Autoloader::register();
     }
 
-    public static function getTitle(){
-        return self::$title;
+    //Factory
+    public function getTable($name){
+        $class_name = '\\app\\table\\' . ucfirst($name) . 'Table';
+        return new $class_name($this->getDb());
     }
 
-    public function setTitle($title){
-        self::$title = $title . ' | ' . self::$title ;
+    //Factory
+    public function getDb(){
+        $config = Config::getInstance(ROOT . '/config/config.php');
+        if(is_null($this->db_instance)){
+            $this->db_instance = new MysqlDatabase($config->get('db_name'), $config->get('db_user'), $config->get('db_pass'), $config->get('db_host'));
+        }
+        return $this->db_instance;
     }
 }
