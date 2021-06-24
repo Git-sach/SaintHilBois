@@ -11,6 +11,7 @@ class App{
 
 
     private static $database;
+    private static $title = "SaintHilBois";
 
     public static function getDb(){
         if(self::$database === null){
@@ -24,4 +25,11 @@ class App{
         header('Location:index.php?p=404');
     }
 
+    public static function getTitle(){
+        return self::$title;
+    }
+
+    public function setTitle($title){
+        self::$title = $title . ' | ' . self::$title ;
+    }
 }

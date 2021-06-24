@@ -8,16 +8,8 @@ class Table{
 
     protected static $table;
 
-    private static function getTable(){
-        if(static::$table === null){
-            $class_name = explode('\\',get_called_class());
-            static::$table = strtolower(end($class_name));
-        } 
-        return static::$table;
-    }
-
     public static function getAll(){
-        return self::query("SELECT * FROM " . static::getTable() . "");
+        return static::query("SELECT * FROM " . static::$table . "");
     }   
 
     /*lorsque que l'on fait appel a un attribut non defini: 
@@ -29,7 +21,7 @@ class Table{
     }
 
     public static function find($id){
-        return App::getDb()->prepare('SELECT * FROM ' . static::$table . ' WHERE id = ?', [$id], get_called_class() , true);
+        return static::query('SELECT * FROM ' . static::$table . ' WHERE id = ?', [$id], get_called_class() , true);
     }
 
     public static function query($statement, $attributes = null, $one = false){
