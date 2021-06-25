@@ -12,7 +12,9 @@ class Autoloader{
     static function autoload($class){
         if(strpos($class, __NAMESPACE__ . '\\') === 0){
             $class = str_replace(__NAMESPACE__ . '\\', '', $class);
-            require __DIR__ . '/' . $class . '.php';
+            $path = __DIR__ . '/' . $class . '.php';
+            $replace = str_replace('\\', '/', $path);
+            require str_replace('\\', '/', $path);
         }
     }
 }

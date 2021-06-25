@@ -26,6 +26,42 @@ class Table {
         return $this->query('SELECT * FROM ' . $this->table . ' WHERE id = ?', [$id], true);
     }
 
+    public function update($id, $fields){
+        $sql_parts = [];
+        $attributes = [];
+        foreach($fields as $k => $v){
+            $sql_parts[] = "$k = ?";
+            $attributes[] = $v;
+        }
+        $attributes[] = $id;
+        $sql_part = implode(', ', $sql_parts);
+        return $this->query('UPDATE ' . $this->table . ' SET ' . $sql_part . ' WHERE id = ?', $attributes, true);
+    }
+
+    public function create($fields){
+        $sql_parts = [];
+        $attributes = [];
+        foreach($fields as $k => $v){
+            $sql_parts[] = "$k = ?";
+            $attributes[] = $v;
+        }
+        $sql_part = implode(', ', $sql_parts);
+        return $this->query('INSERT INTO ' . $this->table . ' SET ' . $sql_part, $attributes, true);
+    }
+
+    public function delete($id){
+        return $this->query('DELETE FROM ' . $this->table . ' WHERE id = ?', [$id], true);
+    }
+
+    public function list($key, $value){
+        $records = $this->all();
+        $return = [];
+        foreach($records as $v){
+            $return[$v->$key] = $v->$value;
+        }
+        return $return;
+    } 
+
     public function query($statement, $attributes = null, $one = false){
         //-> @replace -> replace table/ClassTable by entity/ClassEntity
         $replace = str_replace('table', 'entity', str_replace('Table', 'Entity', get_class($this)));

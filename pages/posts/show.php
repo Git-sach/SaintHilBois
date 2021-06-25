@@ -1,5 +1,7 @@
 <?php
 
+use app\Help;
+
 $app = App::getInstance();
 $post = $app->getTable('Post')->find($_GET['id']);
 if($post === false){
@@ -9,10 +11,9 @@ if($post === false){
 $app->title = $post->title;
 
 $category = $app->getTable('Category')->find($post->category_id);
-
 ?>
 
 
 <h1><?= $post->title; ?></h1>
-<p><em> <?= $category->title ?> </em></p>
+<p><em> <?= $category == null ? "Autre" : $category->title ?> </em></p>
 <p><?= $post->content; ?></p>

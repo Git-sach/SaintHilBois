@@ -8,7 +8,7 @@ use app\Help;
     <ul>
         <?php foreach(App::getInstance()->getTable('Post')->last() as $post): ?>
             <h2><a href="<?= $post->URL ?>"><?= $post->title ?></a></h2>
-            <p><em><?= $post->category; ?></em></p>
+            <p><em><?= $post->category === null ? $post->category="Autre" : $post->category?></em></p>
             <p><?= $post->Extract; ?></p>
         <?php endforeach;?>
     </ul>
