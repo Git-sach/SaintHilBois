@@ -1,6 +1,6 @@
 <?php
 
-namespace app\Controller\admin;
+namespace app\Controller\creation\admin;
 
 
 use core\HTML\Form;
@@ -15,7 +15,7 @@ class CategoriesController extends AppController{
 
     public function index(){
         $categories = $this->Category->all();
-        $this->render('admin.categories.index', compact('categories'));
+        $this->render('creation.admin.categories.index', compact('categories'));
     }
 
     public function add(){
@@ -26,7 +26,7 @@ class CategoriesController extends AppController{
             return $this->index();
         }
         $form = new Form($_POST);
-        $this->render('admin.categories.add', compact('form'));
+        $this->render('creation.admin.categories.add', compact('form'));
     }
 
     public function edit(){
@@ -38,7 +38,7 @@ class CategoriesController extends AppController{
         }
         $category = $this->Category->find($_GET['id']);
         $form = new Form($category);
-        $this->render('admin.categories.edit', compact('form'));
+        $this->render('creation.admin.categories.edit', compact('form'));
     }
 
     public function delete(){

@@ -1,6 +1,6 @@
 <?php
 
-namespace app\Controller;
+namespace app\Controller\creation;
 
 use core\Controller\Controller;
 
@@ -15,7 +15,7 @@ class PostsController extends AppController{
     public function index(){
         $posts = $this->Post->last();
         $categories = $this->Category->all();
-        $this->render('posts.index', compact('posts', 'categories'));
+        $this->render('creation.posts.index', compact('posts', 'categories'));
         //compact('posts', 'categories') -> crée un tableau [posts=>$posts, categories=>$categories]
     }
 
@@ -26,13 +26,13 @@ class PostsController extends AppController{
         }
         $articles = $this->Post->lastByCategory($_GET['id']);
         $categories = $this->Category->all();
-        $this->render('posts.category', compact('articles', 'categories', 'category'));
+        $this->render('creation.posts.category', compact('articles', 'categories', 'category'));
     }
 
     public function show(){
         $post = $this->Post->find($_GET['id']);
         $category = $this->Category->find($post->category_id);
-        $this->render('posts.show', compact('post', 'category'));
+        $this->render('creation.posts.show', compact('post', 'category'));
     }
 
 }

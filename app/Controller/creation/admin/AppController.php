@@ -1,11 +1,11 @@
 <?php
 
-namespace app\Controller\admin;
+namespace app\Controller\creation\admin;
 
 use \app;
 use core\Auth\DBAuth;
 
-class AppController extends \app\Controller\AppController{
+class AppController extends \app\Controller\creation\AppController{
 
     public function __construct(){
         parent::__construct();

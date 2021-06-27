@@ -1,6 +1,6 @@
 <?php
 
-namespace app\Controller\admin;
+namespace app\Controller\creation\admin;
 
 
 use core\HTML\Form;
@@ -15,7 +15,7 @@ class PostsController extends AppController{
 
     public function index(){
         $posts = $this->Post->all();
-        $this->render('admin.posts.index', compact('posts'));
+        $this->render('creation.admin.posts.index', compact('posts'));
     }
 
     public function add(){
@@ -32,7 +32,7 @@ class PostsController extends AppController{
         $this->loadModel('Category');
         $categories = $this->Category->list('id', 'title');
         $form = new Form($_POST);
-        $this->render('admin.posts.add', compact('categories', 'form'));
+        $this->render('creation.admin.posts.add', compact('categories', 'form'));
     }
 
     public function edit(){
@@ -50,7 +50,7 @@ class PostsController extends AppController{
         $this->loadModel('Category');
         $categories = $this->Category->list('id', 'title');
         $form = new Form($post);
-        $this->render('admin.posts.edit', compact('categories', 'form'));
+        $this->render('creation.admin.posts.edit', compact('categories', 'form'));
     }
 
     public function delete(){

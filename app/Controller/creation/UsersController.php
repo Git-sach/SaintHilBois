@@ -1,6 +1,6 @@
 <?php
 
-namespace app\Controller;
+namespace app\Controller\creation;
 
 use core\HTML\Form;
 use core\auth\DBAuth;
@@ -13,7 +13,7 @@ class UsersController extends AppController{
         if(!empty($_POST)){
             $auth = new DBAuth(App::getInstance()->getDb());
             if($auth->login($_POST['username'], $_POST['password'])){
-                header('Location: index.php?p=admin.posts.index');
+                header('Location: index.php?p=creation.admin.posts.index');
             } else {
                 $errors = true;
             }

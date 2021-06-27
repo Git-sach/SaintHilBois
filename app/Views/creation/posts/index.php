@@ -1,4 +1,4 @@
-<h1>Je suis la home page home</h1>
+<h1>Je suis la home page creation</h1>
 
 <div>
     <ul>
