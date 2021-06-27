@@ -7,6 +7,8 @@ use core\Auth\DBAuth;
 
 class AppController extends \app\Controller\creation\AppController{
 
+    protected $template = 'admin\creation';
+
     public function __construct(){
         parent::__construct();
         //Auth

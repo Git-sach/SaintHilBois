@@ -18,13 +18,13 @@ if(isset($_GET['p'])){
 /**
  * CREATION
  */
-if($page === 'creation.post.index'){
+if($page === 'creation.posts.index'){
     $controller = new \app\Controller\creation\PostsController();
     $controller->index();
-} elseif($page === 'creation.post.category'){
+} elseif($page === 'creation.posts.categories'){
     $controller = new \app\Controller\creation\PostsController();
     $controller->category();
-} elseif($page === 'creation.post.show'){
+} elseif($page === 'creation.posts.show'){
     $controller = new \app\Controller\creation\PostsController();
     $controller->show();
 } elseif($page === 'login'){

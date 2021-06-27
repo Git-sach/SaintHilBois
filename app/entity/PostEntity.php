@@ -7,7 +7,7 @@ use \core\entity\Entity;
 class PostEntity extends Entity{
 
     public function getUrl(){
-        return 'index.php?p=creation.post.show&id=' .$this->id;
+        return 'index.php?p=creation.posts.show&id=' .$this->id;
     }
 
     public function getExtract(){
