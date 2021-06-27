@@ -14,14 +14,43 @@ if(isset($_GET['p'])){
 }
 
 if($page === 'home'){
-    require ROOT . '/pages/posts/home.php';
+    $controller = new \app\Controller\PostsController();
+    $controller->index();
 } elseif($page === 'post.category'){
-    require ROOT . '/pages/posts/category.php';
+    $controller = new \app\Controller\PostsController();
+    $controller->category();
 } elseif($page === 'post.show'){
-    require ROOT . '/pages/posts/show.php';
+    $controller = new \app\Controller\PostsController();
+    $controller->show();
 } elseif($page === 'login'){
-    require ROOT . '/pages/users/login.php';
-}
+    $controller = new \app\Controller\UsersController();
+    $controller->login();
+} 
 
-$content = ob_get_clean();
-require ROOT . '/pages/templates/default.php';
+elseif($page === 'admin.posts.index'){
+    $controller = new \app\Controller\admin\PostsController();
+    $controller->index();
+} elseif($page === 'admin.posts.add'){
+    $controller = new \app\Controller\admin\PostsController();
+    $controller->add();
+}  elseif($page === 'admin.posts.edit'){
+    $controller = new \app\Controller\admin\PostsController();
+    $controller->edit();
+}  elseif($page === 'admin.posts.delete'){
+    $controller = new \app\Controller\admin\PostsController();
+    $controller->delete();
+} 
+ 
+elseif($page === 'admin.categories.index'){
+    $controller = new \app\Controller\admin\CategoriesController();
+    $controller->index();
+} elseif($page === 'admin.categories.add'){
+    $controller = new \app\Controller\admin\CategoriesController();
+    $controller->add();
+}  elseif($page === 'admin.categories.edit'){
+    $controller = new \app\Controller\admin\CategoriesController();
+    $controller->edit();
+}  elseif($page === 'admin.categories.delete'){
+    $controller = new \app\Controller\admin\CategoriesController();
+    $controller->delete();
+}

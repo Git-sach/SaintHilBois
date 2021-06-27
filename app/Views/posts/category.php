@@ -1,18 +1,3 @@
-<?php
-
-use app\Help;
-
-$app = App::getInstance();
-$category = $app->getTable('Category')->find($_GET['id']);
-
-if($category === false){
-    $app->notFound();
-}
-$articles = $app->getTable('Post')->lastByCategory($_GET['id']);
-$categories = $app->getTable('Category')->all();
-
-?>
-
 <h1> <?= $category->title ?> </h1>
 
 <div>

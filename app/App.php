@@ -39,14 +39,4 @@ class App{
         }
         return $this->db_instance;
     }
-
-    public function forbidden(){
-        Header('HTTP/1.0 403 Forbidden');
-        die('Acces interdit');
-    }
-
-    public function notFound(){
-        Header('HTTP/1.0 404 Not Found');
-        die('Page introuvable');
-    }
 }

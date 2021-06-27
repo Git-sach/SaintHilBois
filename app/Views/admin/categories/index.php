@@ -1,11 +1,7 @@
-<?php
-$categories = App::getInstance()->getTable('Category')->all();
-?>
-
 <h1>adminisitrer les catégories</h1>
 
 <p>
-    <a href="?p=categories.add" class="btn_green">ajouter</a>
+    <a href="?p=admin.categories.add" class="btn_green">ajouter</a>
 </p>
 
 <table class="table">
@@ -22,8 +18,8 @@ $categories = App::getInstance()->getTable('Category')->all();
                 <td><?= $category->id ?></td>
                 <td><?= $category->title ?></td>
                 <td>
-                    <a class="btn" href="?p=categories.edit&id=<?= $category->id ?>">Editer</a>
-                    <form action="?p=categories.delete" method="post">
+                    <a class="btn" href="?p=admin.categories.edit&id=<?= $category->id ?>">Editer</a>
+                    <form action="?p=admin.categories.delete" method="post">
                         <input type="hidden" name="id" value="<?= $category->id ?>">
                         <button type="submit" class="btn_red">Supprimer</button>
                     </form>
