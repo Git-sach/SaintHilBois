@@ -1,24 +1,27 @@
-<h1>Je suis la home page creation</h1>
-
-<div>
-    <ul>
+<div class="creationIndex">
+    <ul class="cards">
         <?php foreach($posts as $post): ?>
-            <h2><a href="<?= $post->URL ?>"><?= $post->title ?></a></h2>
-            <p><em><?= $post->category === null ? $post->category="Autre" : $post->category?></em></p>
-            <p><?= $post->Extract; ?></p>
+            <div class="card">
+                <img class="imgCard" src="http://via.placeholder.com/200x120">
+                <div class="textCard">
+                    <div class="titleCard"><a href="<?= $post->URL ?>"><?= $post->title ?></a></div>
+                    <!--<p><?= $post->date; ?></p>-->
+                    <p class="category"><em><?= $post->category === null ? $post->category="Autre" : $post->category?></em></p>
+                    <p><?= $post->Extract; ?></p>
+                </div>
+            </div>
         <?php endforeach;?>
     </ul>
-</div>
 
-<hr>
+    <hr class="hrVer">
 
-<div>
-    <ul>    
+    <ul class="categories">
+        <div class="titleCategories">Categories:</div>    
         <?php foreach($categories as $categorie):?>
-            <li>
-                <p><a href="<?= $categorie->URL ?>"> <?= $categorie->title ?> </a></p>
-            </li>
-            <?php endforeach ?>
+        <li class="category">
+            <p><em><a href="<?= $categorie->URL ?>"> <?= $categorie->title ?> </a></em></p>
+        </li>
+        <?php endforeach ?>
     </ul>
 </div>
 

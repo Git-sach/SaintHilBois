@@ -1,6 +1,6 @@
 <?php
 
-namespace app\Controller\creation;
+namespace app\Controller;
 
 use core\Controller\Controller;
 use \app;
@@ -17,4 +17,7 @@ class AppController extends Controller{
         $this->$model_name = App::getInstance()->getTable($model_name);
     }
 
+    public function building(){
+        $this->render('templates.building');
+    }
 }

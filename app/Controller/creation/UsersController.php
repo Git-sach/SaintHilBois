@@ -6,7 +6,7 @@ use core\HTML\Form;
 use core\auth\DBAuth;
 use \App;
 
-class UsersController extends AppController{
+class UsersController extends \app\Controller\AppController{
 
     public function login(){
         $errors = false;

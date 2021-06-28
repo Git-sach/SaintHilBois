@@ -19,8 +19,8 @@ if(isset($_GET['p'])){
  * HOME
  */
 if($page === 'home.index'){
-    $controller = new \app\Controller\creation\PostsController(); /* provisoir */
-    $controller->index(); /* provisoir */
+    $controller = new \app\Controller\AppController(); /* provisoir */
+    $controller->building(); /* provisoir */
 
 /**
  * CREATION
@@ -70,13 +70,13 @@ elseif($page === 'creation.admin.categories.index'){
  * ABOUT
  */
 } elseif($page === 'about.index'){
-    $controller = new \app\Controller\creation\PostsController(); /* provisoir */
-    $controller->index(); /* provisoir */
+    $controller = new \app\Controller\AppController(); /* provisoir */
+    $controller->building(); /* provisoir */
 
 /**
  * CONTACT
  */
 } elseif($page === 'contact.index'){
-    $controller = new \app\Controller\creation\PostsController(); /* provisoir */
-    $controller->index(); /* provisoir */
+    $controller = new \app\Controller\AppController(); /* provisoir */
+    $controller->building(); /* provisoir */
 }

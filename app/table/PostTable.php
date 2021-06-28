@@ -14,7 +14,7 @@ class PostTable extends Table{
      */
     public function last(){
         return $this->query("
-        SELECT articles.id, articles.title, content, categories.title as category 
+        SELECT articles.id, articles.title, content, date, categories.title as category 
         FROM articles 
         LEFT JOIN categories 
             ON category_id = categories.id

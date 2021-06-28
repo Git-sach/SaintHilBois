@@ -5,9 +5,9 @@ namespace app\Controller\creation\admin;
 use \app;
 use core\Auth\DBAuth;
 
-class AppController extends \app\Controller\creation\AppController{
+class AppController extends \app\Controller\AppController{
 
-    protected $template = 'admin\creation';
+    protected $template = 'admin\default';
 
     public function __construct(){
         parent::__construct();

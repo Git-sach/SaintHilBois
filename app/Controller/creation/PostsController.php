@@ -4,7 +4,7 @@ namespace app\Controller\creation;
 
 use core\Controller\Controller;
 
-class PostsController extends AppController{
+class PostsController extends \app\Controller\AppController{
 
     public function __construct(){
         parent::__construct(); //-> appel le constructeur parent
