@@ -1,5 +1,6 @@
 <?php
 
+use app\Help;
 use core\Config;
 use core\database\MysqlDatabase;
 
@@ -38,5 +39,9 @@ class App{
             $this->db_instance = new MysqlDatabase($config->get('db_name'), $config->get('db_user'), $config->get('db_pass'), $config->get('db_host'));
         }
         return $this->db_instance;
+    }
+
+    public static function getMenu(){
+        return explode('.', $_GET['p'])[0];
     }
 }

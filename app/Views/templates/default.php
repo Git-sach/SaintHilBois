@@ -10,16 +10,16 @@
 
     <nav class="menu">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="?p=creation.posts.index">Cration</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li class="home"><a class="<?= App::getMenu() == 'home' ? 'active' : ''?>" href="?p=home.index">Home</a></li>
+            <li><a class="<?= App::getMenu() == 'creation' ? 'active' : ''?>" href="?p=creation.posts.index">Cration</a></li>
+            <li><a class="<?= App::getMenu() == 'about' ? 'active' : ''?>" href="?p=about.index">About</a></li>
+            <li><a class="<?= App::getMenu() == 'contact' ? 'active' : ''?>" href="?p=contact.index">Contact</a></li>
         </ul>
     </nav>
 
     <hr>
 
-    <div>
+    <div class="admin">
         <a href="?p=creation.admin.posts.index">[Admin space]</a>
     </div>
 
