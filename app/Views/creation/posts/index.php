@@ -20,12 +20,14 @@
     <hr class="hrVer">
 
     <ul class="categories">
-        <div class="titleCategories">Categories:</div>    
-        <?php foreach($categories as $categorie):?>
-        <li class="category">
-            <p><em><a href="<?= $categorie->URL ?>"> <?= $categorie->title ?> </a></em></p>
-        </li>
-        <?php endforeach ?>
+        <div class="contentCategories">  
+            <div class="titleCategories">Categories:</div>  
+            <?php foreach($categories as $categorie):?>
+                <li class="category">
+                    <p><em><a href="<?= $categorie->URL ?>"> <?= $categorie->title ?> </a></em></p>
+                </li>
+            <?php endforeach ?>
+        </div>
     </ul>
 </div>
 

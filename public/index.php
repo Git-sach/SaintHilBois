@@ -22,6 +22,9 @@ if($page === 'home.index'){
     $controller = new \app\Controller\AppController(); /* provisoir */
     $controller->building(); /* provisoir */
 
+} elseif($page === 'home.admin.index'){
+    $controller = new \app\Controller\creation\admin\AppController(); /* provisoir ->> car dossier a créer pour Home about et contact avec admin/appController correspondent */
+    $controller->building(); /* provisoir */
 /**
  * CREATION
  */
@@ -73,10 +76,19 @@ elseif($page === 'creation.admin.categories.index'){
     $controller = new \app\Controller\AppController(); /* provisoir */
     $controller->building(); /* provisoir */
 
+} elseif($page === 'about.admin.index'){
+    $controller = new \app\Controller\creation\admin\AppController(); /* provisoir ->> car dossier a créer pour Home about et contact avec admin/appController correspondent */
+    $controller->building(); /* provisoir */
+
 /**
  * CONTACT
  */
 } elseif($page === 'contact.index'){
     $controller = new \app\Controller\AppController(); /* provisoir */
     $controller->building(); /* provisoir */
+
+} elseif($page === 'contact.admin.index'){
+    $controller = new \app\Controller\creation\admin\AppController(); /* provisoir ->> car dossier a créer pour Home about et contact avec admin/appController correspondent */
+    $controller->building(); /* provisoir */
+
 }

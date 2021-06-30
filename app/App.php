@@ -44,4 +44,12 @@ class App{
     public static function getMenu(){
         return explode('.', $_GET['p'])[0];
     }
+
+    public static function getMenuCreationAdmin(){
+        return explode('.', $_GET['p'])[2];
+    }
+
+    public static function getCateID(){
+        return $_GET['id'];
+    } 
 }

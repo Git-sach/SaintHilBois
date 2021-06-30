@@ -3,7 +3,7 @@
 namespace app\Controller\creation\admin;
 
 use \app;
-use core\Auth\DBAuth;
+use core\auth\DBAuth;
 
 class AppController extends \app\Controller\AppController{
 

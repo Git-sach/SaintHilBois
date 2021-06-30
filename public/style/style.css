@@ -12,11 +12,83 @@
     --gray-darker: #696969;
     --gray: #999999;
     --gray-lighter: #cccccc;
+    --green-darker: #228a3a;
+    --green: #28a745;
+    --red-darker: #c02e3d;
+    --red: #f13a4d;
+    --blue-darker: #2c62cc;
+    --blue: #377bff;
 
     --creat-large-scree: 88%;
     --creat-small-scree: 100%;
 
-  }
+}
+
+.btn_success {
+    background-color: var(--green);
+    color: var(--back-color);
+    border: 1px solid var(--green);
+    display: block;
+    width: 100px;
+    height: 30px;
+    align-self: flex-end;
+    border-radius: 5px;
+    transition: 300ms;
+    margin: 5px 5px 5px 5px;
+}
+
+.btn_success:hover {
+    color: var(--back-color);
+    background-color: var(--green-darker);
+    border: 1px solid var(--green-darker);
+    transition: 300ms;
+}
+
+.btn_danger {
+    background-color: var(--red);
+    color: var(--back-color);
+    border: 1px solid var(--red);
+    display: block;
+    width: 100px;
+    height: 30px;
+    align-self: flex-end;
+    border-radius: 5px;
+    transition: 300ms;
+    margin: 5px 5px 5px 5px;
+}
+
+.btn_danger:hover {
+    color: var(--back-color);
+    background-color: var(--red-darker);
+    border: 1px solid var(--red-darker);
+    transition: 300ms;
+}
+
+.btn_primary {
+    background-color: var(--blue);
+    color: var(--back-color);
+    border: 1px solid var(--blue);
+    display: block;
+    width: 100px;
+    height: 30px;
+    align-self: flex-end;
+    border-radius: 5px;
+    transition: 300ms;
+    margin: 5px 5px 5px 5px;
+}
+
+.btn_primary:hover {
+    color: var(--back-color);
+    background-color: var(--blue-darker);
+    border: 1px solid var(--blue-darker);
+    transition: 300ms;
+}
+
+.space {
+    height: 10px;
+}
+
+/*-------------------------------------------------------------------------------------*/
 
 body {
     background-color: var(--back-color);
@@ -24,6 +96,10 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0px;
+}
+
+h1 {
+    color: var(--text-color);
 }
 
 /*------Menu------*/
@@ -80,7 +156,7 @@ nav ul li .active {
 /*------Menu------*/
 
 hr {
-	width: 95%;
+	width: 93%;
 	border:none;
 	background: var(--hr-color);
 	height: 1px;
@@ -110,7 +186,7 @@ hr {
     padding: 0;
 }
 
-.creationIndex .cards .red{
+.red{
     color: var(--hover-color);
 }
 
@@ -171,7 +247,7 @@ hr {
 
 .creationIndex .hrVer {
 	width: 1px;
-	border:none;
+	border: none;
 	background: var(--hr-color);
 	height: auto;
     margin: 0px 20px 0px 20px;
@@ -179,11 +255,17 @@ hr {
 
 .creationIndex .categories {
     padding-left: 0px;
+    position: absolut;
 }
 
 .creationIndex .categories .titleCategories {
     color: var(--gray-darker);
     font-size: large;
+}
+
+.creationIndex .categories .contentCategories{
+    position: sticky;
+    top: 40px;
 }
 
 .creationIndex .categories .category{
@@ -201,8 +283,95 @@ hr {
     transition: 300ms;
 }
 
-/*------CreationIndex------*/
+.creationIndex .categories .category .active {
+	color: var(--active-color);
+}
 
+/*------CreationIndex------*/
+/*------CreationAdmin------*/
+
+.creationAdmin{
+    padding: 20px 130px 40px 130px;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+}
+  
+.creationAdmin thead td:nth-child(1) {
+width: 5%;
+}
+
+.creationAdmin thead td:nth-child(2) {
+width: 12%;
+}
+
+.creationAdmin thead td:nth-child(3) {
+width: 43%;
+}
+
+.creationAdmin thead td:nth-child(4) {
+width: 15%;
+}
+
+.creationAdmin thead td:nth-child(5) {
+    width: 25%;
+}
+
+.creationAdmin .table .actions{
+    display: flex;
+    align-items: center;
+}
+
+td {
+padding: 20px;
+border-bottom-style: ridge;
+}
+
+thead td {
+    font-size: large;
+    border-bottom-style: outset;
+}
+
+.creationAdmin .navCreationAdmin {
+    font-size: medium;
+	display: block;
+    width: 100%;
+    padding: 0px 0px 10px 0px;
+}
+
+.creationAdmin .navCreationAdmin ul{
+	display: flex;
+    justify-content: flex-start;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+.creationAdmin .navCreationAdmin ul li{
+	list-style: none;
+    padding: 0px 20px 0px 0px;
+}
+
+.creationAdmin .navCreationAdmin ul li a{
+	text-decoration: none;
+	font-family: 16px 'inter', sans-serif;
+    color: var(--text-color);
+    transition: 300ms;
+}
+
+.creationAdmin .navCreationAdmin ul li a:hover {
+	color: var(--hover-color);
+    transition: 300ms;
+}
+
+.creationAdmin .navCreationAdmin ul li .active {
+	color: var(--active-color);
+}
+
+/*------CreationAdmin------*/
 
 /*------Build------*/
 .admin{
@@ -273,6 +442,54 @@ hr {
     }
 
     /*------Creation------*/
+    /*------CreationAdmin------*/
+
+    .creationAdmin{
+        padding: 40px 10px 40px 10px;
+    }
+
+    .creationAdmin thead td:nth-child(1) {
+    width: 8%;
+    }
+    
+    .creationAdmin thead td:nth-child(2) {
+    width: 12%;
+    }
+    
+    .creationAdmin thead td:nth-child(3) {
+        display: none;
+    }
+    .creationAdmin tbody td:nth-child(3) {
+        display: none;
+    }
+    
+    .creationAdmin thead td:nth-child(4) {
+    width: 13%;
+    }
+    
+    .creationAdmin thead td:nth-child(5) {
+        width: 15%;
+    }
+
+    .creationAdmin .table .actions{
+        flex-direction: column;
+    }
+
+    td {
+        padding: 5px;
+    }
+
+    .btn_success {
+        margin: 1px;
+    }
+    .btn_danger {
+        margin: 1px;
+    }
+    .btn_primary {
+        margin: 1px;
+    }
+
+    /*------CreationAdmin------*/
 
     /*------Build------*/
     .build {

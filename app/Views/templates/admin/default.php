@@ -4,25 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="Img/faviconLP.ico">
+    <link rel="stylesheet" href="style/style.css">
     <title><?= App::getInstance()->title ?></title>
 
 </head>
 
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="?p=creation.admin.posts.index">Cration</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
+    <nav class="menu">
+        <ul>
+            <li><a class="<?= App::getMenu() == 'home' ? 'active' : ''?>" href="?p=home.admin.index">Home</a></li>
+            <li><a class="<?= App::getMenu() == 'creation' ? 'active' : ''?>" href="?p=creation.admin.posts.index">Cration</a></li>
+            <li><a class="<?= App::getMenu() == 'about' ? 'active' : ''?>" href="?p=about.admin.index">About</a></li>
+            <li><a class="<?= App::getMenu() == 'contact' ? 'active' : ''?>" href="?p=contact.admin.index">Contact</a></li>
+        </ul>
+    </nav>
 
-    <div>
-        <a href="?p=creation.posts.index">[App space]</a>
-    </div>
-
-    <ul>
-        <li><a href="?p=creation.admin.posts.index">Posts Admin</a></li>
-        <li><a href="?p=creation.admin.categories.index">Categories Admin</a></li>
-    </ul>
+    <hr>
 
     <body>
     

@@ -10,7 +10,7 @@
 
     <nav class="menu">
         <ul>
-            <li class="home"><a class="<?= App::getMenu() == 'home' ? 'active' : ''?>" href="?p=home.index">Home</a></li>
+            <li><a class="<?= App::getMenu() == 'home' ? 'active' : ''?>" href="?p=home.index">Home</a></li>
             <li><a class="<?= App::getMenu() == 'creation' ? 'active' : ''?>" href="?p=creation.posts.index">Creation</a></li>
             <li><a class="<?= App::getMenu() == 'about' ? 'active' : ''?>" href="?p=about.index">About</a></li>
             <li><a class="<?= App::getMenu() == 'contact' ? 'active' : ''?>" href="?p=contact.index">Contact</a></li>
