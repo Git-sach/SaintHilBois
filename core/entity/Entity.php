@@ -11,4 +11,8 @@ class Entity {
         return $this->$method();
     }
 
+    public function btn($action, $class, $content){
+        return '<form method="post" action="' . $action . '"><button class="' . $class . '">' . $content . '</button></form>';
+    }
+
 }

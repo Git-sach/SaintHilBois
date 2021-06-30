@@ -99,6 +99,7 @@ body {
 }
 
 h1 {
+    font-size:x-large;
     color: var(--text-color);
 }
 
@@ -290,37 +291,13 @@ hr {
 /*------CreationIndex------*/
 /*------CreationAdmin------*/
 
-.creationAdmin{
-    padding: 20px 130px 40px 130px;
-}
-
 table {
     table-layout: fixed;
     width: 100%;
     border-collapse: collapse;
 }
-  
-.creationAdmin thead td:nth-child(1) {
-width: 5%;
-}
 
-.creationAdmin thead td:nth-child(2) {
-width: 12%;
-}
-
-.creationAdmin thead td:nth-child(3) {
-width: 43%;
-}
-
-.creationAdmin thead td:nth-child(4) {
-width: 15%;
-}
-
-.creationAdmin thead td:nth-child(5) {
-    width: 25%;
-}
-
-.creationAdmin .table .actions{
+.table .actions{
     display: flex;
     align-items: center;
 }
@@ -335,14 +312,14 @@ thead td {
     border-bottom-style: outset;
 }
 
-.creationAdmin .navCreationAdmin {
+.navCreationAdmin {
     font-size: medium;
 	display: block;
     width: 100%;
     padding: 0px 0px 10px 0px;
 }
 
-.creationAdmin .navCreationAdmin ul{
+.navCreationAdmin ul{
 	display: flex;
     justify-content: flex-start;
     margin: 0px;
@@ -350,26 +327,79 @@ thead td {
     width: 100%;
 }
 
-.creationAdmin .navCreationAdmin ul li{
+.navCreationAdmin ul li{
 	list-style: none;
     padding: 0px 20px 0px 0px;
 }
 
-.creationAdmin .navCreationAdmin ul li a{
+.navCreationAdmin ul li a{
 	text-decoration: none;
 	font-family: 16px 'inter', sans-serif;
     color: var(--text-color);
     transition: 300ms;
 }
 
-.creationAdmin .navCreationAdmin ul li a:hover {
+.navCreationAdmin ul li a:hover {
 	color: var(--hover-color);
     transition: 300ms;
 }
 
-.creationAdmin .navCreationAdmin ul li .active {
+.navCreationAdmin ul li .active {
 	color: var(--active-color);
 }
+
+.contentCreativAdmin {
+    padding: 20px 60px 40px 60px;
+}
+
+        /*Specifique creationArticleAdmin*/
+
+.creationArticleAdmin{
+    width: 1000px;
+    margin: 20px auto 40px auto;
+}
+  
+.creationArticleAdmin thead td:nth-child(1) {
+    width: 5%;
+}
+
+.creationArticleAdmin thead td:nth-child(2) {
+    width: 12%;
+}
+
+.creationArticleAdmin thead td:nth-child(3) {
+    width: 44%;
+}
+
+.creationArticleAdmin thead td:nth-child(4) {
+    width: 15%;
+}
+
+.creationArticleAdmin thead td:nth-child(5) {
+    width: 24%;
+}
+
+        /*Specifique creationArticleAdmin*/
+        /*Specifique creationCategoryAdmin*/
+
+.creationCategoryAdmin{
+    width: 600px;
+    margin: 20px auto 40px auto;
+}
+  
+.creationCategoryAdmin thead td:nth-child(1) {
+width: 20%;
+}
+
+.creationCategoryAdmin thead td:nth-child(2) {
+width: 40%;
+}
+
+.creationCategoryAdmin thead td:nth-child(3) {
+width: 40%;
+}
+
+        /*Specifique creationCategoryAdmin*/
 
 /*------CreationAdmin------*/
 
@@ -393,6 +423,74 @@ thead td {
     margin-left: 100px;
 }
 /*------Build------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1200px){
+
+    /*------CreationAdmin------*/
+
+
+    
+    .creationArticleAdmin .table .actions{
+        flex-direction: column;
+    }
+
+            /*Specifique creationArticleAdmin*/
+    .creationArticleAdmin{
+        width: 660px;
+        margin: 20px auto 40px auto;
+    }
+
+    .creationArticleAdmin thead td:nth-child(1) {
+        width: 8%;
+    }
+    
+    .creationArticleAdmin thead td:nth-child(2) {
+        width: 12%;
+    }
+    
+    .creationArticleAdmin thead td:nth-child(3) {
+        display: 30%;
+    }
+    
+    .creationArticleAdmin thead td:nth-child(4) {
+        display: none;
+    }
+    .creationArticleAdmin tbody td:nth-child(4) {
+        display: none;
+    }
+    
+    .creationArticleAdmin thead td:nth-child(5) {
+        width: 13%;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -444,40 +542,58 @@ thead td {
     /*------Creation------*/
     /*------CreationAdmin------*/
 
-    .creationAdmin{
-        padding: 40px 10px 40px 10px;
+    .contentCreativAdmin {
+        padding: 20px 10px 40px 10px;
     }
 
-    .creationAdmin thead td:nth-child(1) {
-    width: 8%;
-    }
-    
-    .creationAdmin thead td:nth-child(2) {
-    width: 12%;
-    }
-    
-    .creationAdmin thead td:nth-child(3) {
-        display: none;
-    }
-    .creationAdmin tbody td:nth-child(3) {
-        display: none;
-    }
-    
-    .creationAdmin thead td:nth-child(4) {
-    width: 13%;
-    }
-    
-    .creationAdmin thead td:nth-child(5) {
-        width: 15%;
-    }
-
-    .creationAdmin .table .actions{
+    .table .actions{
         flex-direction: column;
     }
 
-    td {
-        padding: 5px;
+            /*Specifique creationArticleAdmin*/
+    .creationArticleAdmin{
+        width: 360px;
+        margin: 20px auto 40px auto;
     }
+
+    .creationArticleAdmin thead td:nth-child(1) {
+        width: 30%;
+    }
+    
+    .creationArticleAdmin thead td:nth-child(2) {
+        width: 42%;
+    }
+    
+    .creationArticleAdmin thead td:nth-child(3) {
+        display: none;
+    }
+    .creationArticleAdmin tbody td:nth-child(3) {
+        display: none;
+    }
+    
+    .creationArticleAdmin thead td:nth-child(5) {
+        width: 28%;
+    }
+            /*Specifique creationArticleAdmin*/
+            /*Specifique creationCategoryAdmin*/
+
+    .creationCategoryAdmin{
+        width: 360px;
+        margin: 20px auto 40px auto;
+    }
+    
+    .creationCategoryAdmin thead td:nth-child(1) {
+    width: 30%;
+    }
+
+    .creationCategoryAdmin thead td:nth-child(2) {
+    width: 42%;
+    }
+
+    .creationCategoryAdmin thead td:nth-child(3) {
+    width: 28%;
+    }
+            /*Specifique creationCategoryAdmin*/
 
     .btn_success {
         margin: 1px;
