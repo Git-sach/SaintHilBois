@@ -12,7 +12,7 @@
     <nav class="menu">
         <ul>
             <li><a class="<?= App::getMenu() == 'home' ? 'active' : ''?>" href="?p=home.admin.index">Home</a></li>
-            <li><a class="<?= App::getMenu() == 'creation' ? 'active' : ''?>" href="?p=creation.admin.posts.index">Cration</a></li>
+            <li><a class="<?= App::getMenu() == 'creation' ? 'active' : ''?>" href="?p=creation.admin.posts.index">Creation</a></li>
             <li><a class="<?= App::getMenu() == 'about' ? 'active' : ''?>" href="?p=about.admin.index">About</a></li>
             <li><a class="<?= App::getMenu() == 'contact' ? 'active' : ''?>" href="?p=contact.admin.index">Contact</a></li>
         </ul>

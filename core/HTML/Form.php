@@ -26,9 +26,9 @@ class Form{
         $type = isset($options['type']) ? $options['type'] : 'text';
         $label = '<label>' . $label . '</label>';
         if($type === 'textarea'){
-            $input = '<textarea name="' . $name . '" class="area">' . $this->getValue($name) . '</textarea>';
+            $input = '<textarea name="' . $name . '" class="text-area">' . $this->getValue($name) . '</textarea>';
         } else {
-            $input = '<input type="' . $type . '" name="' . $name . '" value="' . $this->getValue($name) . '">';
+            $input = '<input type="' . $type . '" class="text-input" name="' . $name . '" value="' . $this->getValue($name) . '">';
         }
         return $this->surrond($label . $input);
     }
