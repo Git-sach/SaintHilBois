@@ -12,7 +12,7 @@ class Entity {
     }
 
     public function btn($action, $class, $content){
-        return '<form method="post" action="' . $action . '"><button class="' . $class . '">' . $content . '</button></form>';
+        return '<a class="' . $class . '" href="' . $action . '">' . $content . '</a>';
     }
 
 }

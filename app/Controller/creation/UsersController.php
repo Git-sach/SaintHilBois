@@ -8,6 +8,8 @@ use \App;
 
 class UsersController extends \app\Controller\AppController{
 
+    protected $template = 'login';
+
     public function login(){
         $errors = false;
         if(!empty($_POST)){

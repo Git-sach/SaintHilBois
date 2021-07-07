@@ -4,8 +4,10 @@
     </div>
 <?php endif ?>
 
-<form method="post">
-    <?= $form->input('username', 'Pseudo') ?>
-    <?= $form->input('password', 'Mot de passe', ['type' => 'password']) ?>
-    <button>Envoyer</button>
-</form>
+<div class="contentLogin">
+    <form method="post">
+        <?= $form->input('username', 'Pseudo') ?>
+        <?= $form->input('password', 'Mot de passe', ['type' => 'password']) ?>
+        <button class="btn_success">S'identifier</button>
+    </form>
+</div>
