@@ -30,8 +30,8 @@
 
 /* BTN */
 .btn_success {
-    background-color: var(--green);
-    color: var(--back-color);
+    background-color: transparent;
+    color: var(--green);
     border: 1px solid var(--green);
     display: block;
     width: 100px;
@@ -50,8 +50,8 @@
 }
 
 .btn_danger {
-    background-color: var(--red);
-    color: var(--back-color);
+    background-color: transparent;
+    color: var(--red);
     border: 1px solid var(--red);
     display: block;
     width: 100px;
@@ -70,8 +70,8 @@
 }
 
 .btn_primary {
-    background-color: var(--blue);
-    color: var(--back-color);
+    background-color: transparent;
+    color: var(--blue);
     border: 1px solid var(--blue);
     display: block;
     width: 100px;
@@ -685,6 +685,10 @@ width: 40%;
     }
     .btn_primary {
         margin: 1px;
+    }
+
+    .text-area {
+        height: 300px;
     }
 
     .contentCreationEdit {
