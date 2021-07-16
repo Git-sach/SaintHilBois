@@ -3,7 +3,7 @@
     <ul class="cards">
         <?php foreach($articles as $post): ?>
             <div class="card">
-                <img class="imgCard" src="http://via.placeholder.com/200x120">
+            <img class="imgCard" src=<?= $post->img == null ? "http://via.placeholder.com/200x120" : "imgdata/$post->img"?>>
                 <div class="textCard">
                 <div class="titleCard"><a href="<?= $post->URL ?>"><?= $post->title ?></a></div>
                     <p><em><?= $post->category; ?></em></p>

@@ -333,9 +333,11 @@ hr {
 }
 
 .creationIndex .imgCard {
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem;
-    filter: contrast(70%);
 }
 
 .creationIndex .textCard {
@@ -545,7 +547,7 @@ width: 44%;
 
 .contentCreationEdit {
     width: 500px;
-    margin: 40px auto 0px auto
+    margin: 40px auto 40px auto
 }
 
 .contentCreationEdit p {
@@ -554,6 +556,12 @@ width: 44%;
 
 .contentCreationEdit .btn_primary {
     margin: 15px 0px 0px auto;
+}
+
+.contentCreationEdit .image {
+    object-fit: cover;
+    width: 500px;
+    height: 300px;
 }
 
         /*Editer*/
@@ -809,6 +817,11 @@ width: 44%;
 
     .contentCreationEdit {
         width: 350px;
+    }
+
+    .contentCreationEdit .image {
+        width: 350px;
+        height: 210px;
     }
 
     .contentCreationAdd {

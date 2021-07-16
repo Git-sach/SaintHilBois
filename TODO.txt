@@ -1,0 +1,4 @@
+TODO: 
+
+-> faire securitée pour les images du même nom.
+-> pouvoir chnager img dans édite.

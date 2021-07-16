@@ -1,6 +1,9 @@
-
 <div class="contentCreationEdit">
     <form method="post">
+        <img src="imgdata/<?= $post->img?>"
+        class="image"
+        alt="Image">
+        
         <div class="flexRow">
             <?= $form->input('title', 'Titre de l\'article') ?>
             <div class="spaceVer"> </div>
