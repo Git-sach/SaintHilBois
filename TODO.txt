@@ -1,4 +1,7 @@
 TODO: 
 
 -> faire securitée pour les images du même nom.
--> pouvoir chnager img dans édite.
+-> Comprésser img card.
+-> Info Danger, Primary, Success (sauvegarde)
+-> Gerer les temps
+

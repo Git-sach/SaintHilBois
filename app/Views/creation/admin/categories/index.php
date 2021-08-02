@@ -9,6 +9,7 @@
     <h1>Administration des <span class="red">Categories</span> </h1>
 
     <div class="creationCategoryAdmin">
+        <?= $alert ?>
         <div class="space"></div>
         <p>
             <?= $categories[0]->btn('?p=creation.admin.categories.add', 'btn_success', 'Ajouter');?>

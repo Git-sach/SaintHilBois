@@ -5,9 +5,13 @@ namespace app\Controller\creation\admin;
 
 use core\HTML\Form;
 use core\auth\DBAuth;
+use \app;
 use app\Help;
 
 class PostsController extends AppController{
+
+    private $alert;
+    private $url = 'index.php?p=creation.admin.posts.index';
 
     public function __construct(){
         parent::__construct();
@@ -16,7 +20,8 @@ class PostsController extends AppController{
 
     public function index(){
         $posts = $this->Post->all();
-        $this->render('creation.admin.posts.index', compact('posts'));
+        $alert = $this->alert;
+        $this->render('creation.admin.posts.index', compact('posts', 'alert'));
     }
 
     public function add(){
@@ -33,6 +38,7 @@ class PostsController extends AppController{
                 'img' => $_FILES['file']['name']
             ]);
             if($result){
+                $this->alert = App::getInstance()->alert('alert_success', $this->url, 'Article bien ajouté!');
                 return $this->index();
             }
         }
@@ -43,17 +49,29 @@ class PostsController extends AppController{
     }
 
     public function edit(){
+        $post = $this->Post->find($_GET['id']);
+        $newImg = $post->img;
+        if(!empty($_FILES)){
+            if(!$_FILES['file']['error']){
+                if($post->img != null){
+                    unlink("imgdata/$post->img");
+                }
+                move_uploaded_file($_FILES['file']['tmp_name'], 'imgdata/' . $_FILES['file']['name']);
+                $newImg = $_FILES['file']['name'];
+            }
+        }
         if(!empty($_POST)){
             $result = $this->Post->update($_GET['id'], [
                 'title' => $_POST['title'],
                 'content' => $_POST['content'],
-                'category_id' => $_POST['category_id']
+                'category_id' => $_POST['category_id'],
+                'img' => $newImg
             ]);
             if($result){
+                $this->alert = App::getInstance()->alert('alert_primary', $this->url, 'Article bien sauvegardé!');
                 return $this->index(); //redirexion vers index
             }
         }
-        $post = $this->Post->find($_GET['id']);
         $this->loadModel('Category');
         $categories = $this->Category->list('id', 'title');
         $form = new Form($post);
@@ -67,6 +85,7 @@ class PostsController extends AppController{
             if($post->img != null){
                 unlink("imgdata/$post->img");
             }
+            $this->alert = App::getInstance()->alert('alert_danger', $this->url, 'Article bien suprimé!');
             return $this->index();
         }
     }

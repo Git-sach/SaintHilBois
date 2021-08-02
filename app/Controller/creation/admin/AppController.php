@@ -18,5 +18,4 @@ class AppController extends \app\Controller\AppController{
             $this->forbidden();
         }
     }
-
 }

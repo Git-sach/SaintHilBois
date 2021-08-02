@@ -6,10 +6,10 @@
             <li><a class="<?= App::getMenuCreationAdmin() == 'categories' ? 'active' : ''?>" href="?p=creation.admin.categories.index">Categories</a></li>
         </ul>
     </div>
-
     <h1>Administration des <span class="red">Articles</span></h1>
 
     <div class="creationArticleAdmin">
+        <?= $alert ?>
         <div class="space"></div>
         
         <p>
