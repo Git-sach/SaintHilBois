@@ -369,7 +369,6 @@ hr {
 }
 
 /*-------Login-------*/
-
 /*------CreationIndex------*/
 
 .creationIndex {
@@ -501,6 +500,80 @@ hr {
 }
 
 /*------CreationIndex------*/
+/*------CreationShow------*/
+
+.contentCreationShow{
+    width: 1200px;
+    height: 1000px;
+    margin: 10px auto 0px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contentCreationShow .head{
+    display: flex;
+    width: 100%;
+}
+
+.contentCreationShow .head .img{
+    object-fit: cover;
+    height: 300px;
+    width: 50%;
+}
+
+.contentCreationShow .head .inf{
+    margin: 0px 10px 0px 30px;
+    width: 50%;
+}
+
+.contentCreationShow .head .inf h1{
+    margin: 0px 0px 0px 0px;
+    color: var(--hover-color);
+    font-size: 28px;
+    letter-spacing: 0.1em;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+.contentCreationShow .head .inf .em{
+    font-size: 15px;
+    color: var(--gray);
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 40px 0px 0px;
+}
+
+.contentCreationShow .head .inf .carac{
+    margin: 50px 0px 0px 0px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.contentCreationShow .head .inf .carac .mention{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 20px 0px 20px;
+}
+
+.contentCreationShow .head .inf .carac .mention p{
+    font-size: 18px;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.contentCreationShow .head .inf .carac .mention .logo{
+    width: 80px;
+}
+
+.contentCreationShow .content {
+    margin-top: 50px;
+    background-color: #EEE9E9;
+    width: 100%;
+    height: 300px;
+}
+
+/*------CreationShow------*/
 /*------CreationAdmin------*/
 
 table {
@@ -712,44 +785,73 @@ width: 44%;
 }
 
 /*-------Login-------*/
+/*------CreationAdmin------*/
 
-    /*------CreationAdmin------*/
+.creationArticleAdmin .table .actions{
+    flex-direction: column;
+}
 
+        /*Specifique creationArticleAdmin*/
+.creationArticleAdmin{
+    width: 660px;
+    margin: 20px auto 40px auto;
+}
 
-    
-    .creationArticleAdmin .table .actions{
-        flex-direction: column;
-    }
+.creationArticleAdmin thead td:nth-child(1) {
+    width: 8%;
+}
 
-            /*Specifique creationArticleAdmin*/
-    .creationArticleAdmin{
-        width: 660px;
-        margin: 20px auto 40px auto;
-    }
+.creationArticleAdmin thead td:nth-child(2) {
+    width: 12%;
+}
 
-    .creationArticleAdmin thead td:nth-child(1) {
-        width: 8%;
-    }
-    
-    .creationArticleAdmin thead td:nth-child(2) {
-        width: 12%;
-    }
-    
-    .creationArticleAdmin thead td:nth-child(3) {
-        display: 30%;
-    }
-    
-    .creationArticleAdmin thead td:nth-child(4) {
-        display: none;
-    }
-    .creationArticleAdmin tbody td:nth-child(4) {
-        display: none;
-    }
-    
-    .creationArticleAdmin thead td:nth-child(5) {
-        width: 13%;
-    }
+.creationArticleAdmin thead td:nth-child(3) {
+    display: 30%;
+}
 
+.creationArticleAdmin thead td:nth-child(4) {
+    display: none;
+}
+.creationArticleAdmin tbody td:nth-child(4) {
+    display: none;
+}
+
+.creationArticleAdmin thead td:nth-child(5) {
+    width: 13%;
+}
+/*------CreationAdmin------*/
+/*------CreationShow------*/
+
+.contentCreationShow{
+    width: 800px;
+}
+.contentCreationShow .head .img{
+    width: 100%;
+}
+
+.contentCreationShow .head .inf h1{
+    font-size: 20px;
+}
+
+.contentCreationShow .head .inf .em{
+    font-size: 13px;
+    margin: 10px 0px 0px 0px;
+}
+
+.contentCreationShow .head .inf .carac{
+    margin: 30px 0px 0px 0px;
+    justify-content: space-between;
+}
+
+.contentCreationShow .head .inf .carac .mention p{
+    font-size: 14px;
+}
+
+.contentCreationShow .head .inf .carac .mention .logo{
+    width: 60px;
+}
+
+/*------CreationShow------*/
 }
 
 
@@ -785,7 +887,6 @@ width: 44%;
         padding: 0px 0px 0px 0px;
     }
     /*------Menu------*/
-
     /*-------Login-------*/
 
     .loginStyle {
@@ -798,7 +899,6 @@ width: 44%;
     }
 
     /*-------Login-------*/
-
     /*------Creation------*/
 
     .creationIndex .introCreation{
@@ -908,7 +1008,43 @@ width: 44%;
     }
 
     /*------CreationAdmin------*/
+    /*------CreationShow------*/
 
+    .contentCreationShow{
+        width: 360px;
+    }
+
+    .contentCreationShow .head .img{
+        height: 200px;
+    }
+
+    .contentCreationShow .head{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .contentCreationShow .head .img{
+        width: 100%;
+    }
+
+    .contentCreationShow .head .inf{
+        width: 100%;
+        margin: 10px 0px 0px 0px;
+    }
+
+    .contentCreationShow .head .inf .carac{
+        margin: 30px 0px 0px 0px;
+        justify-content: space-around;
+    }
+
+    .contentCreationShow .head .inf .carac .mention{
+        display: flex;
+        flex-direction: column;
+        margin: 0px 0px 0px 0px;
+    }
+
+    /*------CreationShow------*/
     /*------Build------*/
     .build {
         margin: 0px;

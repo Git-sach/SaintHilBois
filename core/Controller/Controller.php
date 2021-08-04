@@ -24,4 +24,8 @@ class Controller{
         Header('HTTP/1.0 404 Not Found');
         die('Page introuvable');
     }
+
+    protected function login(){
+        header('Location: index.php?p=login');
+    }
 }
