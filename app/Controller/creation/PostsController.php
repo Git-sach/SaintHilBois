@@ -32,7 +32,8 @@ class PostsController extends \app\Controller\AppController{
     public function show(){
         $post = $this->Post->find($_GET['id']);
         $category = $this->Category->find($post->category_id);
-        $this->render('creation.posts.show', compact('post', 'category'));
+        $cards = $this->Post->SeeAsWell($category->title);
+        $this->render('creation.posts.show', compact('post', 'category', 'cards'));
     }
 
 }

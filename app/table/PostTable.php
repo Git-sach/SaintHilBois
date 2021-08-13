@@ -30,4 +30,13 @@ class PostTable extends Table{
         WHERE category_id = ?", [$id]);
     }
 
+    public function SeeAsWell($category){
+        return $this->query("
+        SELECT articles.id, articles.title, content, date, categories.title as category, img 
+        FROM articles 
+        LEFT JOIN categories ON category_id = categories.id
+        WHERE categories.title = ?
+        ORDER BY articles.date DESC LIMIT 3", [$category]);
+    }
+
 }

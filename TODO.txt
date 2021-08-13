@@ -1,7 +1,6 @@
 TODO: 
 
+-> partitionner les CSS
 -> faire securitée pour les images du même nom.
--> Comprésser img card.
--> Info Danger, Primary, Success (sauvegarde)
 -> Gerer les temps
 

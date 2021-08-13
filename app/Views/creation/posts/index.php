@@ -10,7 +10,7 @@
                 <div class="textCard">
                     <div class="titleCard"><a href="<?= $post->URL ?>"><?= $post->title ?></a></div>
                     <!--<p><?= $post->date; ?></p>-->
-                    <p class="category"><em><?= $post->category === null ? $post->category="Autre" : $post->category?></em></p>
+                    <p class="category"><em><?= $post->category?></em></p>
                     <p><?= $post->Extract; ?></p>
                 </div>
             </div>

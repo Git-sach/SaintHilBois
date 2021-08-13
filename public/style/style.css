@@ -4,9 +4,9 @@
 
 :root {
     --text-color: #272727; /*couleure du text*/
-    --back-color: #fcfcfc; /*couleure du du font*/
+    --back-color: #f3efef; /*couleure du du font*/
     --card-color: white;
-    --hr-color: #eeeded;
+    --hr-color: #dbd4d4;
     --hover-color: #cf2e06;
     --active-color: var(--hover-color);
     --gray-darker: #696969;
@@ -317,6 +317,10 @@ nav ul li a{
     transition: 300ms;
 }
 
+nav ul .logo{
+	padding: 0;
+}
+
 nav ul li a:hover {
 	color: var(--hover-color);
     transition: 300ms;
@@ -325,19 +329,6 @@ nav ul li a:hover {
 nav ul li .active {
 	color: var(--active-color);
 }
-
-/*
-.home::before {
-	display: inline-block;
-	content: '';
-	width: 15px;
-	height: 15px;
-	background: url(/img/DeleteR.png) center center / contain no-repeat;
-	margin-right: 5px;
-	transform: translateY(2px);
-	transition-duration: 0.5s;
-}
-*/
 
 /*------Menu------*/
 
@@ -503,9 +494,9 @@ hr {
 /*------CreationShow------*/
 
 .contentCreationShow{
-    width: 1200px;
+    width: 1100px;
     height: 1000px;
-    margin: 10px auto 0px auto;
+    margin: 30px auto 0px auto;
     display: flex;
     flex-direction: column;
 }
@@ -519,6 +510,7 @@ hr {
     object-fit: cover;
     height: 300px;
     width: 50%;
+    filter: drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.2));
 }
 
 .contentCreationShow .head .inf{
@@ -528,11 +520,21 @@ hr {
 
 .contentCreationShow .head .inf h1{
     margin: 0px 0px 0px 0px;
-    color: var(--hover-color);
+    color: var(--text-color);
     font-size: 28px;
     letter-spacing: 0.1em;
     font-weight: 100;
     text-transform: uppercase;
+    position: relative;
+}
+
+.contentCreationShow .head .inf h1::before {
+    position: absolute;
+    content: '';
+    width: 30%;
+    height: 22px;
+    bottom: -7px;
+    background: rgba(207, 46, 6, 0.1);
 }
 
 .contentCreationShow .head .inf .em{
@@ -544,10 +546,11 @@ hr {
 }
 
 .contentCreationShow .head .inf .carac{
-    margin: 50px 0px 0px 0px;
+    margin: 35px 0px 0px 0px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    transition: 1s;
 }
 
 .contentCreationShow .head .inf .carac .mention{
@@ -559,7 +562,7 @@ hr {
 .contentCreationShow .head .inf .carac .mention p{
     font-size: 18px;
     text-align: center;
-    color: var(--text-color);
+    color: var(--gray-darker);
 }
 
 .contentCreationShow .head .inf .carac .mention .logo{
@@ -567,10 +570,22 @@ hr {
 }
 
 .contentCreationShow .content {
-    margin-top: 50px;
-    background-color: #EEE9E9;
+    margin-top: 10px;
     width: 100%;
-    height: 300px;
+    font-size: 24px;
+    line-height: 36px;
+    color: var(--gray-darker);
+    position: relative;
+}
+
+.contentCreationShow .content::before {
+    position: absolute;
+    left: -10px;
+    top: 15px;
+    content: '';
+    width: 30px;
+    height: 100%;
+    background: rgba(207, 46, 6, 0.1);
 }
 
 /*------CreationShow------*/
@@ -833,14 +848,21 @@ width: 44%;
     font-size: 20px;
 }
 
+.contentCreationShow .head .inf h1::before {
+    width: 200px;
+    height: 18px;
+    bottom: -8px;
+}
+
 .contentCreationShow .head .inf .em{
     font-size: 13px;
     margin: 10px 0px 0px 0px;
 }
 
 .contentCreationShow .head .inf .carac{
-    margin: 30px 0px 0px 0px;
+    margin: 10px 0px 0px 0px;
     justify-content: space-between;
+    transition: 1s;
 }
 
 .contentCreationShow .head .inf .carac .mention p{
@@ -848,7 +870,11 @@ width: 44%;
 }
 
 .contentCreationShow .head .inf .carac .mention .logo{
-    width: 60px;
+    width: 70px;
+}
+
+.contentCreationShow .content {
+    font-size: 22px;
 }
 
 /*------CreationShow------*/
@@ -1011,11 +1037,7 @@ width: 44%;
     /*------CreationShow------*/
 
     .contentCreationShow{
-        width: 360px;
-    }
-
-    .contentCreationShow .head .img{
-        height: 200px;
+        width: 100%;
     }
 
     .contentCreationShow .head{
@@ -1025,12 +1047,17 @@ width: 44%;
     }
 
     .contentCreationShow .head .img{
+        height: 200px;
+    }
+
+    .contentCreationShow .head .img{
         width: 100%;
     }
 
     .contentCreationShow .head .inf{
         width: 100%;
         margin: 10px 0px 0px 0px;
+        padding: 0px 25px 0px 20px;
     }
 
     .contentCreationShow .head .inf .carac{

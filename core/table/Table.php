@@ -3,6 +3,7 @@
 namespace core\table;
 
 use core\database\Database;
+use app\Help;
 
 class Table {
 
@@ -50,6 +51,13 @@ class Table {
     }
 
     public function delete($id){
+        // pour suprimer les articles sans categories.
+        //-----------------------------------
+        if($this->table === 'categories'){
+            $id_autre = $this->query("SELECT id FROM categories WHERE title = 'Autre'", null, true);
+            $update = $this->query('UPDATE articles SET category_id = ' . $id_autre->id . ' WHERE category_id = ' . $id);
+        }
+        //-----------------------------------
         return $this->query('DELETE FROM ' . $this->table . ' WHERE id = ?', [$id], true);
     }
 
