@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="Img/faviconLP.ico">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="/style/commun/menu.css">
+    <link rel="stylesheet" href="/style/build.css">
     <link rel="shortcut icon" href="img/logo.png">
     <title><?= App::getInstance()->title ?></title>
 </head>
@@ -26,12 +27,6 @@
     </nav>
 
     <hr>
-
-    <!--
-    <div class="admin">
-        <a href="?p=creation.admin.posts.index">[Admin space]</a>
-    </div>
-    -->
 
     <body>
     

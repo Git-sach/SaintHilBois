@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="style/creation/admin/posts/index.css">
+
 <div class="contentCreativAdmin">
 
     <div class="navCreationAdmin">

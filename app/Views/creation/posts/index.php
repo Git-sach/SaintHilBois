@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="/style/commun/commun.css">
+<link rel="stylesheet" href="style/creation/posts/index.css">
+
 <div class="creationIndex">
     <ul class="cards">
         <div class="introCreation">

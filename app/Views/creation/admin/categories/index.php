@@ -1,6 +1,4 @@
-<head>
-    <link rel="stylesheet" href="style/creation_show.css">
-</head>
+<link rel="stylesheet" href="style/creation/admin/categories/index.css">
 
 <div class="contentCreativAdmin">
     <div class="navCreationAdmin">

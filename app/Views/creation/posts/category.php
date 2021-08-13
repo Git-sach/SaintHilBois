@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="style/creation/posts/index.css">
+
 <!-- <h1> <?= $category->title ?> </h1> -->
 <div class="creationIndex">
     <ul class="cards">

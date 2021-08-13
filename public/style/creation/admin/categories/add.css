@@ -1,0 +1,16 @@
+@import url("/style/commun/commun.css");
+@import url("/style/commun/form.css");
+@import url("/style/commun/btn.css");
+
+.contentCreationAdd {
+    width: 500px;
+    margin: 40px auto 0px auto
+}
+
+.contentCreationAdd p {
+    width: 100%;
+}
+
+.contentCreationAdd .btn_primary {
+    margin: 15px 0px 0px auto;
+}

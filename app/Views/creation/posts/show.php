@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="style/creation/posts/show.css">
+
 <div class="contentCreationShow">
     <div class="head">
         <img class="img" src=<?= $post->img == null ? "http://via.placeholder.com/200x120" : "imgdata/$post->img"?>>

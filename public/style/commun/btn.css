@@ -1,0 +1,133 @@
+.btn_success {
+    text-decoration: none;
+    background-color: transparent;
+    color: var(--green);
+    border: 2px solid var(--green);
+    display: block;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    transition: 300ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    margin: 5px;
+}
+
+.btn_success::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -100px;
+    width: 100%;
+    height: 30px;
+    background-color: var(--green);
+    border: 1px solid var(--green);
+    border-radius: 0px 40px 0px 0px;
+    transition: 500ms;
+    z-index: -1;
+}
+
+.btn_success:hover::before{
+    left: -1px;
+    transition: 500ms;
+    border-radius: 0px;
+}
+
+.btn_success:hover{
+    color: white;
+    transition: 500ms;
+}
+
+
+.btn_danger {
+    text-decoration: none;
+    background-color: transparent;
+    color: var(--red);
+    border: 2px solid var(--red);
+    display: block;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    transition: 300ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    margin: 5px;
+}
+
+.btn_danger::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -100px;
+    width: 100%;
+    height: 30px;
+    background-color: var(--red);
+    border: 1px solid var(--red);
+    border-radius: 0px 40px 0px 0px;
+    transition: 500ms;
+    z-index: -1;
+}
+
+.btn_danger:hover::before{
+    left: -1px;
+    transition: 500ms;
+    border-radius: 0px;
+}
+
+.btn_danger:hover{
+    color: white;
+    transition: 500ms;
+}
+
+
+.btn_primary {
+    text-decoration: none;
+    background-color: transparent;
+    color: var(--blue);
+    border: 2px solid var(--blue);
+    display: block;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    transition: 300ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    margin: 5px;
+}
+
+.btn_primary::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -100px;
+    width: 100%;
+    height: 30px;
+    background-color: var(--blue);
+    border: 1px solid var(--blue);
+    border-radius: 0px 40px 0px 0px;
+    transition: 500ms;
+    z-index: -1;
+}
+
+.btn_primary:hover::before{
+    left: -1px;
+    transition: 500ms;
+    border-radius: 0px;
+}
+
+.btn_primary:hover{
+    color: white;
+    transition: 500ms;
+}

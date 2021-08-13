@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="style/creation/admin/categories/edit.css">
+
 <div class="contentCreationEdit">
     <form method="post">
         <?= $form->input('title', 'Titre de la catégorie') ?>

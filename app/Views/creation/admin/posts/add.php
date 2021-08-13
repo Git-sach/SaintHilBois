@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="style/creation/admin/posts/add.css">
+
 <div class="contentCreationAdd">
     <form method="post" enctype="multipart/form-data">
         <div class="flexRow">

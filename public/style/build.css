@@ -1,0 +1,43 @@
+@import url("/style/commun/commun.css");
+
+.admin{
+    margin-top: 30px;
+}
+
+.build {
+    margin: 0px 50px 0px 50px;
+    display: flex;
+    flex-direction:row;
+}
+
+.build h1{
+    margin: auto 30px auto 30px;
+    color: #242424;
+}
+
+.build .svg{
+    margin-left: 100px;
+}
+
+
+
+@media only screen and (max-width: 800px){
+    .build {
+        margin: 0px;
+    }
+
+    .build h1{
+        font-size: small;
+        margin: auto 10px auto 0px;
+        color: #242424;
+    }
+
+    .build .svg{
+        margin-left: 10px;
+    }
+
+    .build .crane{
+        margin-left: 0px;
+        width: 150px;
+    }
+}

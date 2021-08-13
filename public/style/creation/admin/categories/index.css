@@ -1,0 +1,153 @@
+@import url("/style/commun/commun.css");
+@import url("/style/commun/btn.css");
+@import url("/style/commun/alert.css");
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table .actions{
+    display: flex;
+    align-items: center;
+}
+
+td {
+padding: 20px;
+border-bottom-style: ridge;
+}
+
+thead td {
+    font-size: large;
+    border-bottom-style: outset;
+}
+
+.navCreationAdmin {
+    font-size: medium;
+	display: block;
+    width: 100%;
+    padding: 0px 0px 10px 0px;
+}
+
+.navCreationAdmin ul{
+	display: flex;
+    justify-content: flex-start;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+.navCreationAdmin ul li{
+	list-style: none;
+    padding: 0px 20px 0px 0px;
+}
+
+.navCreationAdmin ul li a{
+	text-decoration: none;
+	font-family: 16px 'inter', sans-serif;
+    color: var(--text-color);
+    transition: 300ms;
+}
+
+.navCreationAdmin ul li a:hover {
+	color: var(--hover-color);
+    transition: 300ms;
+}
+
+.navCreationAdmin ul li .active {
+	color: var(--active-color);
+}
+
+.contentCreativAdmin {
+    padding: 20px 60px 40px 60px;
+}
+
+.creationCategoryAdmin{
+    width: 600px;
+    margin: 20px auto 40px auto;
+}
+  
+.creationCategoryAdmin thead td:nth-child(1) {
+width: 14%;
+}
+
+.creationCategoryAdmin thead td:nth-child(2) {
+width: 42%;
+}
+
+.creationCategoryAdmin thead td:nth-child(3) {
+width: 44%;
+}
+
+.flexRow {
+    display: flex;
+    width: 100%;
+}
+
+.flexRow .spaceVer {
+    width: 15px;
+}
+
+
+@media only screen and (max-width: 1200px){
+
+    .creationArticleAdmin .table .actions{
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    
+    .contentCreativAdmin {
+        padding: 20px 10px 40px 10px;
+    }
+
+    .table .actions{
+        flex-direction: column;
+    }
+
+    .creationCategoryAdmin{
+        width: 360px;
+        margin: 20px auto 40px auto;
+    }
+    
+    .creationCategoryAdmin thead td:nth-child(1) {
+    width: 14%;
+    }
+
+    .creationCategoryAdmin thead td:nth-child(2) {
+    width: 48%;
+    }
+
+    .creationCategoryAdmin thead td:nth-child(3) {
+    width: 38%;
+    }
+
+    .btn_success {
+        margin: 1px;
+    }
+    .btn_danger {
+        margin: 1px;
+    }
+    .btn_primary {
+        margin: 1px;
+    }
+
+    .text-area {
+        height: 300px;
+    }
+
+    .contentCreationEdit {
+        width: 350px;
+    }
+
+    .contentCreationEdit .image {
+        width: 350px;
+        height: 210px;
+    }
+
+    .contentCreationAdd {
+        width: 350px;
+    } 
+}

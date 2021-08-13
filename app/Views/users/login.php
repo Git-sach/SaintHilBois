@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="/style/commun/commun.css">
+<link rel="stylesheet" href="style/users/login.css">
+
 <?php if($errors): ?>
     <div class="alert">
         Identifiants incorrects.

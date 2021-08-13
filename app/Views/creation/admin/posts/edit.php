@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="style/creation/admin/posts/edit.css">
+
 <div class="contentCreationEdit">
     <form method="post" enctype="multipart/form-data">
         <img src=<?= $post->img == null ? "http://via.placeholder.com/200x120" : "imgdata/$post->img"?>
