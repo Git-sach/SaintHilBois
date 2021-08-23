@@ -33,7 +33,9 @@
         <p><?= $post->content; ?></p>
     </div>
 
-    <div class="creationIndex">
+    <p class="voirAussi">Voir aussi:</p>
+
+    <div class="trioCard">
         <ul class="cards">
             <?php foreach($cards as $card): ?>
                 <div class="card">
@@ -48,5 +50,4 @@
             <?php endforeach;?>
         </ul>
     </div>
-
 </div>

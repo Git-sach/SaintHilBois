@@ -19,8 +19,8 @@ if(isset($_GET['p'])){
  * HOME
  */
 if($page === 'home.index'){
-    $controller = new \app\Controller\AppController(); /* provisoir */
-    $controller->building(); /* provisoir */
+    $controller = new \app\Controller\home\HomeController(); /* provisoir */
+    $controller->index(); /* provisoir */
 
 } elseif($page === 'home.admin.index'){
     $controller = new \app\Controller\creation\admin\AppController(); /* provisoir ->> car dossier a créer pour Home about et contact avec admin/appController correspondent */

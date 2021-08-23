@@ -1,0 +1,172 @@
+@import url("/style/commun/commun.css");
+@import url("/style/commun/btn.css");
+
+.container {
+    width: 1100px;
+    margin: 30px auto 0px auto;
+}
+
+.container .header {
+    display: flex;
+}
+
+.container .header .headerLeft {
+    width: 50%;
+}
+
+.container .header .svg {
+    width: 50%;
+    position: relative;
+}
+
+.container .header .svg svg{
+    position: absolute;
+    width: 500px;
+    top: -68px;
+    right: 0px;
+}
+
+.container .header .headerLeft .title {
+    width: 50%;
+    font-size: 2.5rem;
+    color: var(--text-color);
+}
+
+.container .header .headerLeft .text {
+    font-size: 1.19rem;
+    color: var(--text-color);
+}
+
+.container .header .headerLeft button {
+    margin: 60px 0px 0px 0px;
+}
+
+.trioCardBack {
+    margin: 280px 0px 100px 0px;
+    height: 400px;
+    background-color: var(--back-color2);
+    display: flex;
+    justify-content: center;
+}
+
+.trioCardBack .containerTrioCard {
+    width: 1100px;
+    margin: 0px auto 0px auto;
+    display: flex;
+    position: absolute;
+}
+
+.trioCardBack .containerTrioCard .card {
+    width: 33%;
+    height: 400px;
+    background-color: var(--back-color2);
+    display: block;
+}
+
+.trioCardBack .containerTrioCard .card:hover {
+    background-color: var(--back-color);
+    height: 420px;
+    box-shadow: 0 0 5px 5px rgb(23 54 71 / 20%);
+    border-top: 10px solid var(--active-color);
+    position: relative;
+    top: -10px;
+    transition: box-shadow .3s ease-in-out;
+}
+
+.trioCardBack .containerTrioCard .card svg{
+    width: 100%;
+    margin: 40px auto 0px auto;
+    height: 70px;
+}
+
+.trioCardBack .containerTrioCard .card .title{
+    text-align: center;
+    margin: 40px 0px 0px 0px;
+    Font-size: 25px;
+}
+
+.trioCardBack .containerTrioCard .card .text{
+    text-align: center;
+    margin: 50px 0px 0px 0px;
+    Font-size: 15px;
+}
+
+.trioCardBack .containerTrioCard .card .btn_main{
+    text-align: center;
+    margin: 60px auto 0px auto;
+}
+
+
+
+@media only screen and (max-width: 1150px){
+
+    .container {
+        width: 800px;
+    }
+
+    .container .header .headerLeft .title {
+        width: 100%;
+        font-size: 2.5rem;
+        color: var(--text-color);
+    }
+
+    .container .header .svg svg{
+        position: absolute;
+        width: 420px;
+        top: -105px;
+    }
+
+    .trioCardBack .containerTrioCard {
+        width: 800px;
+    }
+
+    .trioCardBack .containerTrioCard .card .title{
+        margin: 20px 0px 0px 0px;
+    }
+    
+    .trioCardBack .containerTrioCard .card .text{
+        margin: 30px 0px 0px 0px;
+    }
+    
+    .trioCardBack .containerTrioCard .card .btn_main{
+        margin: 40px auto 0px auto;
+    }
+}
+
+@media only screen and (max-width: 830px){
+
+    .container {
+        width: 90%;
+    }
+
+    .container .header .svg {
+        display: none;
+    }
+
+    .container .header .headerLeft {
+        width: 100%;
+    }
+
+    .trioCardBack {
+        margin: 80px 0px 100px 0px;
+        height: 1075px;
+    }
+
+    .trioCardBack .containerTrioCard {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .trioCardBack .containerTrioCard .card {
+        width: 90%;
+        margin: 0px auto 10px auto;
+        background-color: var(--back-color);
+        height: 360px;
+        box-shadow: 0 0 5px 5px rgb(23 54 71 / 20%);
+        border-top: 10px solid var(--active-color);
+        position: relative;
+        top: -10px;
+        transition: box-shadow .3s ease-in-out;
+    }
+}

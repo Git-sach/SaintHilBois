@@ -4,7 +4,8 @@
 
 :root {
     --text-color: #272727; /*couleure du text*/
-    --back-color: #f3efef; /*couleure du du font*/
+    --back-color: #f8f4f4; /*couleure du du font*/
+    --back-color2: #EEE9E9;
     --card-color: white;
     --hr-color: #dbd4d4;
     --hover-color: #cf2e06;
@@ -12,6 +13,8 @@
     --gray-darker: #696969;
     --gray: #999999;
     --gray-lighter: #cccccc;
+
+    /*btn*/
     --green-darker: #228a3a;
     --green: #28a745;
     --red-darker: #c02e3d;
@@ -19,6 +22,7 @@
     --blue-darker: #2c62cc;
     --blue: #377bff;
 
+    /*alerts*/
     --alert-danger-back: #F8D7DA;
     --alert-danger-font: #BE7C82;
 
