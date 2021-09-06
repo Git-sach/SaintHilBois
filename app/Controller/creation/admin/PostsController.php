@@ -31,11 +31,14 @@ class PostsController extends AppController{
             }
         }
         if(!empty($_POST)){
+            //$dateNow = new \DateTime('NOW', new \DateTimeZone('Europe/Paris'));
+            //echo $dateNow->format('d-m-Y H:i:s');
             $result = $this->Post->create([
                 'title' => $_POST['title'],
                 'content' => $_POST['content'],
                 'category_id' => $_POST['category_id'],
                 'img' => $_FILES['file']['name']
+                //'date' => $_POST[$dateNow->format('Y-m-d H:i:s')]
             ]);
             if($result){
                 $this->alert = App::getInstance()->alert('alert_success', $this->url, 'Article bien ajouté!');

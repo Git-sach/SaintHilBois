@@ -7,7 +7,7 @@
             <h1><?= $post->title; ?></h1>
             <div class="em">
                 <p><em> <?= $category->title ?> </em></p>
-                <p><em> 10 Juiller 1995 </em></p>
+                <p><em> <?= $post->getdate()->format('jS F Y') ?> </em></p>
             </div>
             <div class="carac">
                 <div class="mention">
@@ -33,7 +33,9 @@
         <p><?= $post->content; ?></p>
     </div>
 
-    <p class="voirAussi">Voir aussi:</p>
+    <div class="contentTitle">
+        <p class="Title">VOUS AIMEREZ AUSSI</p>
+    </div>
 
     <div class="trioCard">
         <ul class="cards">
@@ -42,12 +44,26 @@
                     <img class="imgCard" src=<?= $card->img == null ? "http://via.placeholder.com/200x120" : "imgdata/$card->img"?>>
                     <div class="textCard">
                         <div class="titleCard"><a href="<?= $card->URL ?>"><?= $card->title ?></a></div>
-                        <!--<p><?= $card->date; ?></p>-->
                         <p class="category"><em><?= $card->category === null ? $card->category="Autre" : $card->category?></em></p>
+                    <p><em><?= $post->getdate()->format('jS F Y') ?></em></p>
                         <p><?= $card->Extract; ?></p>
                     </div>
                 </div>
             <?php endforeach;?>
         </ul>
     </div>
+
+    <div class="contentTitle">
+        <p class="Title">LESSEZ UN COMMENTAIRE</p>
+    </div>
+
+    <div class="commenteSpace">
+        <form method="post">
+            <input required type="text" class="text-input" name="name" placeholder="Votre nom">
+            <input required type="text" class="text-input" name="mail" placeholder="Votre mail">
+            <textarea required name="comment" class="text-area" placeholder="Votre commentaire"></textarea>
+            <button type="submite" class="btn_success">Envoyer</button>
+        </form>   
+    </div>
+
 </div>

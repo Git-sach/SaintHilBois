@@ -10,6 +10,7 @@ class PostsController extends \app\Controller\AppController{
         parent::__construct(); //-> appel le constructeur parent
         $this->loadModel('Post');
         $this->loadModel('Category');
+        $this->loadModel('Comment_post');
     }
 
     public function index(){
@@ -30,6 +31,15 @@ class PostsController extends \app\Controller\AppController{
     }
 
     public function show(){
+        if(!empty($_POST)){
+            $result = $this->Comment_post->create([
+                'post_id' => $_GET['id'],
+                'comment' => $_POST['comment'],
+                'name' => $_POST['name'],
+                'mail' => $_POST['mail']
+                //'date' => $_POST[$dateNow->format('Y-m-d H:i:s')]
+            ]);
+        }
         $post = $this->Post->find($_GET['id']);
         $category = $this->Category->find($post->category_id);
         $cards = $this->Post->SeeAsWell($category->title);

@@ -12,8 +12,8 @@
                 <img class="imgCard" src=<?= $post->img == null ? "http://via.placeholder.com/200x120" : "imgdata/$post->img"?>>
                 <div class="textCard">
                     <div class="titleCard"><a href="<?= $post->URL ?>"><?= $post->title ?></a></div>
-                    <!--<p><?= $post->date; ?></p>-->
                     <p class="category"><em><?= $post->category?></em></p>
+                    <p><em><?= $post->getdate()->format('jS F Y') ?></em></p>
                     <p><?= $post->Extract; ?></p>
                 </div>
             </div>

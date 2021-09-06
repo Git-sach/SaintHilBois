@@ -169,4 +169,8 @@
         top: -10px;
         transition: box-shadow .3s ease-in-out;
     }
+
+    .trioCardBack .containerTrioCard .card:hover {
+        height: 360px;
+    }
 }

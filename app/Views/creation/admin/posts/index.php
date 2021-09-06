@@ -34,7 +34,7 @@
                         <td><?= $post->id ?></td>
                         <td><?= $post->title ?></td>
                         <td> <?= substr($post->content,1,125) . '...' ?> </td> <!--TODO-->
-                        <td> 10/10/2010 </td> <!--TODO-->
+                        <td><?= $post->getdate()->format('d-m-y') ?></td> <!--TODO-->
                         <td>
                             <div class="actions">
                                 <?= $post->btn('?p=creation.admin.posts.edit&id=' . $post->id, 'btn_primary', 'Editer');?>

@@ -6,7 +6,8 @@
 }
 
 .creationIndex {
-    margin: 20px 3% 10px 3%;
+    width: 1100px;
+    margin: 30px auto 0px auto;
     display: flex;
 }
 
@@ -77,7 +78,29 @@
 }
 
 
+@media only screen and (max-width: 1150px){
+    .creationIndex {
+        width: 800px;
+        margin: 30px auto 0px auto;
+        display: flex;
+    }
+
+    .creationIndex .introCreation{
+        width: 100%;
+    }
+
+    .card {
+        width: 49%;
+    }
+}
+
+
+
 @media only screen and (max-width: 800px){
+
+    .creationIndex {
+        width: 100%;
+    }
 
     .creationIndex .introCreation{
         width: 100%;
@@ -94,7 +117,6 @@
     }
 
     .creationIndex .hrVer {
-        /*margin: 0px 8px 0px 8px;*/
         display: none;
     }
 

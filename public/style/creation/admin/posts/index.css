@@ -13,6 +13,10 @@ table {
     align-items: center;
 }
 
+.table tr:hover {
+    background-color: #f3efef;
+}
+
 td {
 padding: 20px;
 border-bottom-style: ridge;
