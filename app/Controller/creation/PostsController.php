@@ -34,16 +34,16 @@ class PostsController extends \app\Controller\AppController{
         if(!empty($_POST)){
             $result = $this->Comment_post->create([
                 'post_id' => $_GET['id'],
-                'comment' => $_POST['comment'],
+                'comment' => nl2br(htmlentities($_POST['comment'])),
                 'name' => $_POST['name'],
                 'mail' => $_POST['mail']
                 //'date' => $_POST[$dateNow->format('Y-m-d H:i:s')]
             ]);
+            header('Location: index.php?p=creation.posts.show&id=' . $_GET['id']);
         }
         $post = $this->Post->find($_GET['id']);
         $category = $this->Category->find($post->category_id);
         $cards = $this->Post->SeeAsWell($category->title);
         $this->render('creation.posts.show', compact('post', 'category', 'cards'));
     }
-
 }

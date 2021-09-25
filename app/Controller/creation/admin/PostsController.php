@@ -66,7 +66,7 @@ class PostsController extends AppController{
         if(!empty($_POST)){
             $result = $this->Post->update($_GET['id'], [
                 'title' => $_POST['title'],
-                'content' => $_POST['content'],
+                'content' => nl2br(htmlentities($_POST['content'])),
                 'category_id' => $_POST['category_id'],
                 'img' => $newImg
             ]);
@@ -78,7 +78,9 @@ class PostsController extends AppController{
         $this->loadModel('Category');
         $categories = $this->Category->list('id', 'title');
         $form = new Form($post);
-        $this->render('creation.admin.posts.edit', compact('categories', 'form', 'post'));
+        $this->loadModel('Comment_post');
+        $comments = $this->Comment_post->findComments($_GET['id']);
+        $this->render('creation.admin.posts.edit', compact('categories', 'form', 'post', 'comments'));
     }
 
     public function delete(){

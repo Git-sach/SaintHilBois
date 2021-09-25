@@ -33,7 +33,7 @@
                     <tr>
                         <td><?= $post->id ?></td>
                         <td><?= $post->title ?></td>
-                        <td> <?= substr($post->content,1,125) . '...' ?> </td> <!--TODO-->
+                        <td><?= substr($post->content,1,125) . '...' ?> </td> <!--TODO-->
                         <td><?= $post->getdate()->format('d-m-y') ?></td> <!--TODO-->
                         <td>
                             <div class="actions">

@@ -2,35 +2,246 @@
 @import url("/style/commun/form.css");
 @import url("/style/commun/btn.css");
 
-.contentCreationEdit {
-    width: 500px;
-    margin: 40px auto 40px auto
+:root {
+    --title-card-color: #333333;
+
+    --cardMain-width: 30%;
+    --cardContaine-width: 43%;
+    --cardCaracteristics-width: 25%;
+    --cardComments-width: 100%;
+
+    --border-radius: 1em;
+
+    --box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+    --heigt-child1:3%;
+    --heigt-child2:10%;
+    --heigt-child3:65%;
+    --heigt-child4:15%;
+    --heigt-child5:7%;
 }
 
-.contentCreationEdit p {
+body {
+    background-color: var(--dashboard-color);
+}
+
+.title h1{
+    margin: 0;
+}
+
+.title {
+    display: flex;
+    margin: 10px 0px;
+}
+
+.contentCreationEdit {
+    width: 1100px;
+    margin: 0px auto 40px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.flexCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px 10px;
+}
+
+.flexCards .cardMain {
+    background-color:white;
+    margin: 0;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    width: var(--cardMain-width);
+    overflow: hidden;
+}
+
+.flexCards .cardMain h1 {
+    background-color:var(--title-card-color);
+    padding: 10px;
+    font-size: 14px;
+    color: white;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.flexCards .cardMain h1 svg {
+    margin-right: 10px;
+}
+
+.flexCards .cardMain .content {
+    padding: 10px 10px 5px 10px;
+}
+
+.flexCards .cardMain .image {
     width: 100%;
+    object-fit: cover;
+}
+
+.flexCards .cardContaine {
+    background-color:white;
+    margin: 0;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    width: var(--cardContaine-width);
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.flexCards .cardContaine svg{
+    margin-right: 10px;
+}
+
+.flexCards .cardContaine h1 {
+    background-color:var(--title-card-color);
+    padding: 10px;
+    font-size: 14px;
+    color: white;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.flexCards .cardContaine p {
+    width: 95%;
+    margin: 0px auto 10px auto;
+}
+
+.flexCards .cardContaine .text-area {
+    width: 100%;
+    height: 400px;
+    margin: 0px;
+    padding: 10px 0px 0px 0px;
+    border: none;
+}
+
+
+.flexCards .cardCaracteristics {
+    background-color:white;
+    margin: 0;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    width: var(--cardCaracteristics-width);
 }
 
 .contentCreationEdit .btn_primary {
     margin: 15px 0px 0px auto;
 }
 
-.contentCreationEdit .image {
-    object-fit: cover;
-    width: 500px;
-    height: 300px;
+.flexCards .cardComments{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    width: var(--cardComments-width);
+}
+
+/*--------------------
+    Commentaires
+--------------------*/
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    background-color: white;
+}
+
+thead {
+    color: white;
+}
+
+thead tr {
+    font-size: 14px;
+    background-color: var(--title-card-color);
+    border-bottom-style: hidden;
+}
+
+thead td {
+    font-size: 14px;
+}
+
+td {
+    border-bottom-style: hidden;
+    padding: 10px;
+}
+
+.cardComments thead td:nth-child(1) {
+    width: var(--heigt-child1);
+}
+
+.cardComments thead td:nth-child(2) {
+    width: var(--heigt-child2);
+}
+
+.cardComments thead td:nth-child(3) {
+    width: var(--heigt-child3);
+}
+
+.cardComments thead td:nth-child(4) {
+    width: var(--heigt-child4);
+}
+
+.cardComments thead td:nth-child(5) {
+    width: var(--heigt-child5);
+}
+
+.cardComments tbody tr:nth-child(2n+2) {
+    background-color: #f5f5f5;
 }
 
 
-@media only screen and (max-width: 800px){
+
+@media only screen and (max-width: 1120px){
+    
     .contentCreationEdit {
-        width: 100%;
+        width: 770px;
     }
 
-    .contentCreationEdit .image {
-        object-fit: cover;
+    :root {
+        --cardMain-width: 40%;
+        --cardContaine-width: 58.5%;
+        --cardCaracteristics-width: 28.5%;
+        --cardComments-width: 70%;
+
+        --heigt-child1:3%;
+        --heigt-child2:10%;
+        --heigt-child3:73%;
+        --heigt-child5:14%;
+    }
+
+    .cardComments thead td:nth-child(4) {
+        display: none;
+    }
+    .cardComments tbody td:nth-child(4) {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 790px){
+    
+    .contentCreationEdit {
         width: 100%;
-        height: auto;
+        flex-direction: column;
+        padding: 0px 10px 0px 10px;
+    }
+
+    :root {
+        --cardMain-width: 100%;
+        --cardContaine-width: 100%;
+        --cardCaracteristics-width: 100%;
+        --cardComments-width: 100%;
+    }
+
+    .cardComments thead td:nth-child(5) {
+        display: none;
+    }
+    .cardComments tbody td:nth-child(5) {
+        display: none;
     }
 }
          

@@ -17,7 +17,4 @@ class PostEntity extends Entity{
         return $html;
     }
 
-    public function getDate(){
-        return new \Datetime($this->date);
-    }
 }

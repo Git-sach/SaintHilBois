@@ -15,4 +15,7 @@ class Entity {
         return '<a class="' . $class . '" href="' . $action . '">' . $content . '</a>';
     }
 
+    public function getDate(){
+        return new \Datetime($this->date);
+    }
 }

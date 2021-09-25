@@ -4,11 +4,12 @@
 
 :root {
     --text-color: #272727; /*couleure du text*/
-    --back-color: #f8f4f4; /*couleure du du font*/
+    --back-color: #f8f4f4; /*couleure de font*/
     --back-color2: #EEE9E9;
     --card-color: white;
     --hr-color: #dbd4d4;
     --hover-color: #cf2e06;
+    --hover-color-darker: #c42b05;
     --active-color: var(--hover-color);
     --gray-darker: #696969;
     --gray: #999999;
@@ -34,6 +35,9 @@
 
     --creat-large-scree: 88%;
     --creat-small-scree: 100%;
+
+    /*dashboard*/
+    --dashboard-color: #e5e5e5;
 }
 
 body {

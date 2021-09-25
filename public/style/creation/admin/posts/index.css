@@ -2,6 +2,12 @@
 @import url("/style/commun/btn.css");
 @import url("/style/commun/alert.css");
 
+/* .contentCreativAdmin {
+	background: url(/img/triangle.png);
+    background-size: cover;
+    background-position: center -80px;
+} */
+
 table {
     table-layout: fixed;
     width: 100%;
