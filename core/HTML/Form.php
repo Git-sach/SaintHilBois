@@ -25,8 +25,9 @@ class Form{
     public function input($name, $label, $options = []){
         $type = isset($options['type']) ? $options['type'] : 'text';
         $label = '<label>' . $label . '</label>';
+        $json = '{"json": "' . $this->getValue($name) . '"}';
         if($type === 'textarea'){
-            $input = '<textarea name="' . $name . '" class="text-area">' . $this->getValue($name) . '</textarea>';
+            $input = '<textarea name="' . $name . '" class="text-area">' . json_decode($json)->{'json'} . '</textarea>';
         } else {
             $input = '<input type="' . $type . '" class="text-input" name="' . $name . '" value="' . $this->getValue($name) . '">';
         }

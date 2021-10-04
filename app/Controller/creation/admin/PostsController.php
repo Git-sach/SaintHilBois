@@ -66,7 +66,7 @@ class PostsController extends AppController{
         if(!empty($_POST)){
             $result = $this->Post->update($_GET['id'], [
                 'title' => $_POST['title'],
-                'content' => nl2br(htmlentities($_POST['content'])),
+                'content' => substr(nl2br(htmlentities(json_encode($_POST['content']))),6,-6),
                 'category_id' => $_POST['category_id'],
                 'img' => $newImg
             ]);

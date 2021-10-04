@@ -18,4 +18,9 @@ class Entity {
     public function getDate(){
         return new \Datetime($this->date);
     }
+
+    public function decodeJson($comment){
+        $json = '{"json": "' . $comment . '"}';
+        return nl2br(json_decode($json)->{'json'});
+    }
 }

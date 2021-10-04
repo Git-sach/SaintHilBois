@@ -30,7 +30,9 @@
         </div>
     </div>
     <div class="content">
-        <p><?= $post->content; ?></p>
+        <?php $json = '{"json": "' . $post->content . '"}';
+        ?>
+        <p><?= $post->decodeJson($post->content) ?></p>
     </div>
 
     <div class="contentTitle">

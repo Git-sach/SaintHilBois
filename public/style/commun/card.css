@@ -6,14 +6,20 @@
     flex-direction: column;
     width: 32%;
     margin-bottom: 20px;
+    overflow: hidden;
 }
 
 .imgCard {
     object-fit: cover;
     width: 100%;
     height: 200px;
-    border-top-left-radius: 0.25rem;
-    border-top-right-radius: 0.25rem;
+    transition: .5s;
+}
+
+.card:hover .imgCard {
+     width: 110%;
+     transform: translateX(-8%);
+     transition: .5s;
 }
 
 .textCard {

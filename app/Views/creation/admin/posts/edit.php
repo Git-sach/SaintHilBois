@@ -58,7 +58,6 @@
                 </svg>
                 Contenu de l'article
             </h1>
-
             <?= $form->input('content', '', ['type' => 'textarea']) ?>
         </div>
 
@@ -82,7 +81,7 @@
                         <tr>
                             <td><?= $comment->id ?></td>
                             <td><?= $comment->name ?></td>
-                            <td> <?= $comment->comment ?> </td> <!--TODO-->
+                            <td><?= $comment->decodeJson($comment->comment) ?></td>
                             <td><?= $comment->mail ?></td>
                             <td><?= $comment->getdate()->format('d-m-y') ?></td>
                         </tr>

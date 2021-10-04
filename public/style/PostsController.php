@@ -34,7 +34,7 @@ class PostsController extends \app\Controller\AppController{
         if(!empty($_POST)){
             $result = $this->Comment_post->create([
                 'post_id' => $_GET['id'],
-                'comment' =>  substr(nl2br(htmlentities(json_encode($_POST['comment']))),6,-6),
+                'comment' => nl2br(htmlentities($_POST['comment'])),
                 'name' => $_POST['name'],
                 'mail' => $_POST['mail']
                 //'date' => $_POST[$dateNow->format('Y-m-d H:i:s')]

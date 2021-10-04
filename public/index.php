@@ -19,8 +19,8 @@ if(isset($_GET['p'])){
  * HOME
  */
 if($page === 'home.index'){
-    $controller = new \app\Controller\home\HomeController(); /* provisoir */
-    $controller->index(); /* provisoir */
+    $controller = new \app\Controller\home\HomeController();
+    $controller->index();
 
 } elseif($page === 'home.admin.index'){
     $controller = new \app\Controller\creation\admin\AppController(); /* provisoir ->> car dossier a créer pour Home about et contact avec admin/appController correspondent */
@@ -84,8 +84,8 @@ elseif($page === 'creation.admin.categories.index'){
  * CONTACT
  */
 } elseif($page === 'contact.index'){
-    $controller = new \app\Controller\AppController(); /* provisoir */
-    $controller->building(); /* provisoir */
+    $controller = new \app\Controller\contact\ContactController(); /* provisoir */
+    $controller->index();
 
 } elseif($page === 'contact.admin.index'){
     $controller = new \app\Controller\creation\admin\AppController(); /* provisoir ->> car dossier a créer pour Home about et contact avec admin/appController correspondent */

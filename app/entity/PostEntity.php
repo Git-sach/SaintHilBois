@@ -11,7 +11,8 @@ class PostEntity extends Entity{
     }
 
     public function getExtract(){
-        $html = '<p>' . substr($this->content, 0, 200) . '...' . '</p>';
+         
+        $html = '<p>' . substr($this->decodeJson($this->content),0,200) . '...' . '</p>';
         //$html .= '<p><a href="' . $this->getURL() . '">Voir la suite..</a></p>';
         $html .= '<form method="post" action="' . $this->getURL() . '"><p><button class="btnCard">Voir la suite..</button></p></form>';
         return $html;

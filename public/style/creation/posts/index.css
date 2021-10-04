@@ -33,10 +33,11 @@
 
 .creationIndex .introCreation p{
     line-height: 2em;
+    color: var(--gray-darker);
 }
 
 .creationIndex .hrVer {
-	width: 1px;
+	width: 0.1px;
 	border: none;
 	background: var(--hr-color);
 	height: auto;

@@ -1,0 +1,74 @@
+@import url("/style/commun/commun.css");
+
+body {
+	background: url(/img/map.png);
+    background-size: cover;
+    background-position: center -80px;
+}
+
+.content{
+    width: 100%;
+    display: flex;
+}
+
+.pin {
+    position: absolute;
+    left: 25%;
+    top: 300px;
+}
+
+.card {
+    font-family:'Arial Narrow Bold', sans-serif;
+    position: absolute;
+    width: 320px;
+    height: 300px;
+    right: 20%;
+    top: 28%;
+    background-color: white;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    padding: 30px;
+}
+
+.card h1{
+    color: var(--gray-darker);
+    margin: 0px auto 30px auto;
+    font-size: 28px;
+}
+.card h2{
+    color: var(--gray-darker);
+}
+.card p{
+    color: var(--gray);
+}
+
+.card ul{
+    color: var(--gray);
+    list-style: none;
+    padding: 0;
+}
+
+.card li{
+    display: flex;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.card li svg{
+    fill: var(--gray-darker);
+    margin-right: 10px ;
+}
+
+@media only screen and (max-width: 670px){
+    .content {
+        flex-direction: column;
+    }
+
+    .pin {
+        position: inherit;
+        margin: 40px auto 0px auto;
+    }
+    .card {
+        position:inherit;
+        margin: 40px auto 40px auto;
+    }
+}
