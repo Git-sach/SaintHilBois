@@ -3,174 +3,201 @@
 
 .container {
     width: 1100px;
-    margin: 30px auto 0px auto;
-}
-
-.container .header {
-    display: flex;
-}
-
-.container .header .headerLeft {
-    width: 50%;
-}
-
-.container .header .svg {
-    width: 50%;
-    position: relative;
-}
-
-.container .header .svg svg{
-    position: absolute;
-    width: 500px;
-    top: -68px;
-    right: 0px;
-}
-
-.container .header .headerLeft .title {
-    width: 50%;
-    font-size: 2.5rem;
-    color: var(--text-color);
-}
-
-.container .header .headerLeft .text {
-    font-size: 1.19rem;
-    color: var(--text-color);
-}
-
-.container .header .headerLeft button {
-    margin: 60px 0px 0px 0px;
-}
-
-.trioCardBack {
-    margin: 280px 0px 100px 0px;
-    height: 400px;
-    background-color: var(--back-color2);
-    display: flex;
-    justify-content: center;
-}
-
-.trioCardBack .containerTrioCard {
-    width: 1100px;
     margin: 0px auto 0px auto;
-    display: flex;
-    position: absolute;
+    box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.25);
+    z-index: 0;
+    background: var(--white);
 }
 
-.trioCardBack .containerTrioCard .card {
-    width: 33%;
-    height: 400px;
-    background-color: var(--back-color2);
-    display: block;
-}
-
-.trioCardBack .containerTrioCard .card:hover {
-    background-color: var(--back-color);
-    height: 420px;
-    box-shadow: 0 0 5px 5px rgb(23 54 71 / 20%);
-    border-top: 10px solid var(--active-color);
-    position: relative;
-    top: -10px;
-    transition: box-shadow .3s ease-in-out;
-}
-
-.trioCardBack .containerTrioCard .card svg{
+.imgIntro {
     width: 100%;
-    margin: 40px auto 0px auto;
-    height: 70px;
+    height: 400px;
+    background: url(/img/ImageAccueil.png);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: 0px 0px;
 }
 
-.trioCardBack .containerTrioCard .card .title{
+.intro {
+    width: 100%;
+    height: 480px;
+    display: flex;
+    padding: 50px;
+}
+
+.imgMe{
+    width: 50%;
+    background: url(/img/imgMe.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.textMe {
+    width: 50%;
+    margin: auto 20px;
+}
+
+.textMe p{
     text-align: center;
-    margin: 40px 0px 0px 0px;
-    Font-size: 25px;
+    font-size: 30px;
+    margin: 0;
 }
 
-.trioCardBack .containerTrioCard .card .text{
-    text-align: center;
-    margin: 50px 0px 0px 0px;
-    Font-size: 15px;
+.imgRecipe {
+    position: relative;
+    filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.25));
 }
 
-.trioCardBack .containerTrioCard .card .btn_main{
-    text-align: center;
-    margin: 60px auto 0px auto;
+.imgRecipe img{
+    width: 100%;
+    transition: .5s;
 }
 
+.imgRecipe p{
+    position: absolute;
+    top: 20px;
+    right: 60px;
+    font-size: 32px;
+    width: 350px;
+    color: black;
+    font-family: Courier New;
+}
 
+.imgRecipe svg{
+    position: absolute;
+    top: 90px;
+    right: 65px;
+    width: 90px; 
+    transition: .5s;
+}
 
-@media only screen and (max-width: 1150px){
+.imgRecipe a:hover svg{
+    width: 100px; 
+    transition: .5s;
+    right: 55px;
+}
+
+@media only screen and (max-width: 1100px){ /**Tablette*/
+    .container {
+        width: 770px;
+    }
+
+    .imgIntro {
+        height: 300px;
+    }
+
+    .intro {
+        height: 360px;
+    }
+
+    .textMe p{
+        font-size: 20px;
+    }
+
+    .imgRecipe p{
+        right: 40px;
+        font-size: 28px;
+        width: 300px;
+    }
+
+    .imgRecipe svg{
+        top: 83px;
+        right: 50px;
+        width: 70px; 
+    }
+
+    .imgRecipe a:hover svg{
+        width: 80px; 
+        right: 43px; 
+    }
+}
+
+@media only screen and (max-width: 770px){/**Mobile L*/
+    .container {
+        width: 425px;
+    }
+
+    .imgIntro {
+        height: 155px;
+    }
+
+    .intro {
+        height: 185px;
+        padding: 20px;
+    }
+
+    .textMe p{
+        font-size: 12px;
+    }
+
+    .imgRecipe p{
+        right: 20px;
+        font-size: 14px;
+        width: 160px;
+    }
+
+    .imgRecipe svg{
+        top: 50px;
+        right: 30px;
+        width: 40px; 
+    }
+
+    .imgRecipe a:hover svg{
+        width: 45px;
+        right: 25px; 
+    }
+}
+
+@media only screen and (max-width: 425px){/**Mobile*/
 
     .container {
-        width: 800px;
-    }
-
-    .container .header .headerLeft .title {
         width: 100%;
-        font-size: 2.5rem;
-        color: var(--text-color);
+        background-color: var(--main);
     }
 
-    .container .header .svg svg{
-        position: absolute;
-        width: 420px;
-        top: -105px;
+    .imgIntro {
+        background-size: cover;
     }
 
-    .trioCardBack .containerTrioCard {
-        width: 800px;
-    }
-
-    .trioCardBack .containerTrioCard .card .title{
-        margin: 20px 0px 0px 0px;
-    }
-    
-    .trioCardBack .containerTrioCard .card .text{
-        margin: 30px 0px 0px 0px;
-    }
-    
-    .trioCardBack .containerTrioCard .card .btn_main{
-        margin: 40px auto 0px auto;
-    }
-}
-
-@media only screen and (max-width: 830px){
-
-    .container {
-        width: 90%;
-    }
-
-    .container .header .svg {
-        display: none;
-    }
-
-    .container .header .headerLeft {
-        width: 100%;
-    }
-
-    .trioCardBack {
-        margin: 80px 0px 100px 0px;
-        height: 1075px;
-    }
-
-    .trioCardBack .containerTrioCard {
-        width: 100%;
+    .intro {
         flex-direction: column;
-        justify-content: center;
-    }
-
-    .trioCardBack .containerTrioCard .card {
+        height: auto;
         width: 90%;
-        margin: 0px auto 10px auto;
-        background-color: var(--back-color);
-        height: 360px;
-        box-shadow: 0 0 5px 5px rgb(23 54 71 / 20%);
-        border-top: 10px solid var(--active-color);
-        position: relative;
-        top: -10px;
-        transition: box-shadow .3s ease-in-out;
+        margin: 20px auto;
+        background-color: var(--white);
+        filter: drop-shadow(0px 5px 20px rgba(0, 0, 0, 0.25));
     }
 
-    .trioCardBack .containerTrioCard .card:hover {
-        height: 360px;
+    .imgMe{
+        width: 100%;
+        height: 200px;
+    }
+    
+    .textMe {
+        width: 100%;
+        margin: 0px auto;
+    }
+
+    .textMe p{
+        font-size: 16px;
+        padding: 20px 10px;
+    }
+
+    .imgRecipe p{
+        top: 2px;
+        right: 5px;
+        font-size: 12px;
+        width: 140px;
+    }
+
+    .imgRecipe svg{
+        top: 28px;
+        right: 13px;
+        width: 35px; 
+    }
+
+    .imgRecipe a:hover svg{
+        display: none;
     }
 }

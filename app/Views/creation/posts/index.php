@@ -1,12 +1,16 @@
 <link rel="stylesheet" href="/style/commun/commun.css">
 <link rel="stylesheet" href="style/creation/posts/index.css">
 
-<div class="creationIndex">
+<div class="container">
+
+    <form action="myservlet.do" method="POST">
+        <select class="form-control" name="Test" onchange="this.form.submit()">
+            <option value='test'>test</option>
+            <option value='test2'>test2</option>
+        </select>
+    </form>
+
     <ul class="cards">
-        <div class="introCreation">
-            <h1>Lorem ipsum amet <span class="red">creations</span></h1>
-            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ducimus atque, rem enim est eum, doloribus consequuntur, dicta voluptatem adipisci dolore</p>
-        </div>
         <?php foreach($posts as $post): ?>
             <div class="card">
                 <img class="imgCard" src=<?= $post->img == null ? "http://via.placeholder.com/200x120" : "imgdata/$post->img"?>>
@@ -20,9 +24,7 @@
         <?php endforeach;?>
     </ul>
 
-    <hr class="hrVer">
-
-    <ul class="categories">
+    <!-- <ul class="categories">
         <div class="contentCategories">  
             <div class="titleCategories">Categories:</div>  
             <?php foreach($categories as $categorie):?>
@@ -31,6 +33,6 @@
                 </li>
             <?php endforeach ?>
         </div>
-    </ul>
+    </ul> -->
 </div>
 

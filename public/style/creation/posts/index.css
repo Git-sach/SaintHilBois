@@ -1,127 +1,52 @@
 @import url("/style/commun/commun.css");
 @import url("/style/commun/card.css");
 
-.red{
-    color: var(--hover-color);
-}
-
-.creationIndex {
+.container {
     width: 1100px;
-    margin: 30px auto 0px auto;
+    margin: 0px auto;
     display: flex;
+    flex-direction: column;
+    background: var(--white);
 }
 
-.creationIndex .introCreation{
-    width: 64%;
-    font-size: 1.25rem;
-}
-
-.creationIndex .cards {
-    width: var(--creat-large-scree);
+.container .cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-content: space-between;
     list-style: none;
-    margin: 10px;
+    margin: 100px 0px 10px 0px;
     padding: 0;
 }
 
-.creationIndex .cards .introCreation h1 {
-    font-size: 45px;
-}
 
-.creationIndex .introCreation p{
-    line-height: 2em;
-    color: var(--gray-darker);
-}
-
-.creationIndex .hrVer {
-	width: 0.1px;
-	border: none;
-	background: var(--hr-color);
-	height: auto;
-    margin: 0px 20px 0px 20px;
-}
-
-.creationIndex .categories {
-    padding-left: 0px;
-    position: absolut;
-}
-
-.creationIndex .categories .titleCategories {
-    color: var(--gray-darker);
-    font-size: large;
-}
-
-.creationIndex .categories .contentCategories{
-    position: sticky;
-    top: 40px;
-}
-
-.creationIndex .categories .category{
-    list-style: none;
-}
-
-.creationIndex .categories .category a{
-    text-decoration: none;
-    color: var(--gray);
-    transition: 300ms;
-}
-
-.creationIndex .categories .category a:hover{
-    color: var(--hover-color);
-    transition: 300ms;
-}
-
-.creationIndex .categories .category .active {
-	color: var(--active-color);
-}
-
-
-@media only screen and (max-width: 1150px){
-    .creationIndex {
-        width: 800px;
-        margin: 30px auto 0px auto;
-        display: flex;
-    }
-
-    .creationIndex .introCreation{
-        width: 100%;
+@media only screen and (max-width: 1100px){
+    .container {
+        width: 770px;
     }
 
     .card {
-        width: 49%;
+        width: 350px;
     }
 }
 
 
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 770px){
+    .container {
+        width: 425px;
+    }
+}
 
-    .creationIndex {
+@media only screen and (max-width: 425px){/**Mobile*/
+
+    .container {
         width: 100%;
+        background-color: var(--main);
     }
 
-    .creationIndex .introCreation{
+    .container .cards{
         width: 100%;
-    }
-
-    .creationIndex .cards {
-        width: var(--creat-small-scree);
-        margin: 10px 5px 10px 5px;
-    }
-
-    .creationIndex .card {
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    .creationIndex .hrVer {
-        display: none;
-    }
-
-    .creationIndex .categories {
-        display: none;
+        background-color: var(--main);
     }
 }
