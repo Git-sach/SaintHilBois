@@ -48,6 +48,25 @@ class Form{
         return $this->surrond($label . $input);
     }
 
+    public function selectCreation($name, $label, $id = '0'){
+        $radio = '<input class="hiden" type="radio" id="p" name="p" value="creation.posts.categories"checked>';
+        $input = '<select class="form-control" name="' . $name . '" onchange="this.form.submit()">';
+        foreach($this->data as $k){
+            $attributes = '';
+            if($id == '0'){
+                $input .= "<option value='$k->id' selected disabled hidden>$label</option>";
+            }
+            else{
+                if($k->id == $id){
+                    $attributes = ' selected';
+                }
+            }
+            $input .= "<option value='$k->id'$attributes>$k->title</option>";
+        }
+        $input .= '</select>';
+        return $this->surrond($radio . $input);
+    }
+
     public function submit(){
         return $this->surrond('<button type="submit">Envoyer</button>');
     }

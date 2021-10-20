@@ -23,7 +23,7 @@ class PostTable extends Table{
 
     public function lastByCategory($id){
         return self::query("
-        SELECT articles.id, articles.title, content, categories.title as category, img
+        SELECT articles.id, articles.title, content, date, categories.title as category, img
         FROM articles 
         LEFT JOIN categories 
             ON category_id = categories.id

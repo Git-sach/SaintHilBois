@@ -2,7 +2,9 @@
 
 namespace app\Controller\creation;
 
+use app\Help;
 use core\Controller\Controller;
+use core\HTML\Form;
 
 class PostsController extends \app\Controller\AppController{
 
@@ -16,7 +18,8 @@ class PostsController extends \app\Controller\AppController{
     public function index(){
         $posts = $this->Post->last();
         $categories = $this->Category->all();
-        $this->render('creation.posts.index', compact('posts', 'categories'));
+        $form = new Form($categories);
+        $this->render('creation.posts.index', compact('posts', 'form'));
         //compact('posts', 'categories') -> crée un tableau [posts=>$posts, categories=>$categories]
     }
 
@@ -27,7 +30,8 @@ class PostsController extends \app\Controller\AppController{
         }
         $articles = $this->Post->lastByCategory($_GET['id']);
         $categories = $this->Category->all();
-        $this->render('creation.posts.category', compact('articles', 'categories', 'category'));
+        $form = new Form($categories);
+        $this->render('creation.posts.category', compact('articles', 'form', 'category'));
     }
 
     public function show(){	

@@ -1,31 +1,42 @@
 .card {
-    background-color: var(--card-color);
+    background-color: var(--white);
     border-radius: 0.25rem;
     display: flex;
     flex-direction: column;
     width: 350px;
     margin-bottom: 20px;
     overflow: hidden;
-    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+    filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.15));
 }
 
 .imgCard {
     object-fit: cover;
     width: 100%;
-    height: 200px;
+    height: 250px;
     transition: .5s;
+    position: relative;
 }
 
-.card:hover .imgCard {
-     width: 110%;
-     transform: translateX(-8%);
-     transition: .5s;
+.category{
+    position:absolute;
+    top: 222px;
+    right: 0px;
+    color: var(--white);
+    background: rgba(0, 0, 0, 0.4);
+    padding: 5px;
+    font-size: 8px;
 }
 
 .textCard {
-    padding: 1rem 1rem 0rem 1rem;
-    color: var(--gray);
+    padding: 6px;
+    color: var(--text1);
     line-height: 1.5;
+    text-align: center;
+}
+
+.textCard .border {
+    padding: 0px 12px 5px 12px;
+    border: 1.2px solid var(--text1);
 }
 
 .textCard .titleCard {
@@ -33,30 +44,44 @@
     font-weight: 300;
     letter-spacing: 2px;
     text-transform: uppercase;
+    
 }
 
 .textCard .titleCard a{
+    font-size: 18px;
     text-decoration: none;
-    color: var(--gray-darker);
+    color: var(--text1);
+    border-bottom: 1px solid #000;
+    padding-bottom: 3px;
 }
 
-.textCard .category {
+.textCard .footer{
+    height: 15px;
+    display: flex;
+}
+
+.textCard .footer p{
+    margin: 0px;
+    color: rgba(80, 93, 104, 0.7);
+}
+
+.textCard .footer svg{
     margin-top: 1px;
-    color: var(--gray-lighter);
 }
 
-.textCard .btnCard {
-    background-color: white;
-    color: var(--gray);
-    border: 1px solid var(--gray-lighter);
-    display: block;
-    width: 100%;
-    align-self: flex-end;
-    transition: 300ms;
+.textCard .social{
+    width: 50%;
+    display: flex;
 }
 
-.textCard .btnCard:hover {
-    color: var(--hover-color);
-    border: 1px solid var(--hover-color);
-    transition: 300ms;
+.textCard .social .data{
+    margin-right: 10px;
 }
+
+.textCard .date{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+

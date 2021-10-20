@@ -15,8 +15,16 @@
     justify-content: space-evenly;
     align-content: space-between;
     list-style: none;
-    margin: 100px 0px 10px 0px;
+    margin: 0px 0px 10px 0px;
     padding: 0;
+}
+
+.container .hiden {
+    display: none;
+}
+
+.container .formCreation {
+    padding-left: 12px;
 }
 
 
@@ -28,6 +36,10 @@
     .card {
         width: 350px;
     }
+
+    .container .formCreation {
+        padding-left: 23px;
+    }
 }
 
 
@@ -35,6 +47,10 @@
 @media only screen and (max-width: 770px){
     .container {
         width: 425px;
+    }
+
+    .container .formCreation {
+        padding-left: 38px;
     }
 }
 
@@ -46,7 +62,11 @@
     }
 
     .container .cards{
-        width: 100%;
-        background-color: var(--main);
+        width: 95%;
+        margin: 0px auto 0px auto;
+    }
+
+    .container .formCreation {
+        margin: 0px auto 0px auto;
     }
 }
