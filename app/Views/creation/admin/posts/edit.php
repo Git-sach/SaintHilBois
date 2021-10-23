@@ -65,30 +65,34 @@
             <p>Caractéristiques</p> 
         </div>  
         
-        <div class="cardComments">
-            <table> 
-                <thead>
-                    <tr>
-                        <td>ID</td>
-                        <td>Nom</td>
-                        <td>Commentaire</td>
-                        <td>Mail</td>
-                        <td>Date</td>
-                    </tr>
-                </thead>
-                <tbody> 
-                    <?php foreach($comments as $comment): ?>
+        
+        <?php if(!empty($comments)):?>
+            <div class="cardComments">
+                <table> 
+                    <thead>
                         <tr>
-                            <td><?= $comment->id ?></td>
-                            <td><?= $comment->name ?></td>
-                            <td><?= $comment->decodeJson($comment->comment) ?></td>
-                            <td><?= $comment->mail ?></td>
-                            <td><?= $comment->getdate()->format('d-m-y') ?></td>
+                            <td>ID</td>
+                            <td>Nom</td>
+                            <td>Commentaire</td>
+                            <td>Mail</td>
+                            <td>Date</td>
                         </tr>
-                    <?php endforeach ?>  
-                </tbody>
-            </table> 
-        </div>
+                    </thead>
+                    <tbody> 
+                        <?php foreach($comments as $comment): ?>
+                            <tr>
+                                <td><?= $comment->id ?></td>
+                                <td><?= $comment->name ?></td>
+                                <td><?= $comment->decodeJson($comment->comment) ?></td>
+                                <td><?= $comment->mail ?></td>
+                                <td><?= $comment->getdate()->format('d-m-y') ?></td>
+                            </tr>
+                        <?php endforeach ?>  
+                    </tbody>
+                </table> 
+            </div>
+        <?php endif ?>
+        
         <button class="btn_primary">Sauvegarder</button>
     </form>
 </div> 

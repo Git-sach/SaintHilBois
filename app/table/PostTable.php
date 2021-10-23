@@ -39,4 +39,11 @@ class PostTable extends Table{
         ORDER BY articles.date DESC LIMIT 3", [$category]);
     }
 
+    public function LastAccueil(){
+        return $this->query("
+        SELECT articles.id, articles.title, content, date, categories.title as category, img 
+        FROM articles 
+        LEFT JOIN categories ON category_id = categories.id
+        ORDER BY articles.date DESC LIMIT 6");
+    }
 }

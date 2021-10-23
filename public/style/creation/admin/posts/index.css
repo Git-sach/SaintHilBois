@@ -2,11 +2,43 @@
 @import url("/style/commun/btn.css");
 @import url("/style/commun/alert.css");
 
-/* .contentCreativAdmin {
-	background: url(/img/triangle.png);
-    background-size: cover;
-    background-position: center -80px;
-} */
+.container {
+    padding: 20px 60px 40px 60px;
+    background-color: var(--white);
+    width: 1100px;
+    margin: 0px auto;
+}
+
+.nav {
+    font-size: medium;
+	display: block;
+    width: 100%;
+    padding: 0px 0px 10px 0px;
+}
+
+.nav ul{
+	display: flex;
+    justify-content: flex-start;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+
+.nav ul li{
+	list-style: none;
+    padding: 0px 20px 0px 0px;
+}
+
+.nav ul li a{
+	text-decoration: none;
+	font-family: 16px 'inter', sans-serif;
+    color: var(--text-color);
+    transition: 300ms;
+}
+
+.nav ul li .active {
+	color: var(--active-color);
+}
 
 table {
     table-layout: fixed;
@@ -19,10 +51,6 @@ table {
     align-items: center;
 }
 
-.table tr:hover {
-    background-color: #f3efef;
-}
-
 td {
 padding: 20px;
 border-bottom-style: ridge;
@@ -33,68 +61,28 @@ thead td {
     border-bottom-style: outset;
 }
 
-.navCreationAdmin {
-    font-size: medium;
-	display: block;
-    width: 100%;
-    padding: 0px 0px 10px 0px;
-}
-
-.navCreationAdmin ul{
-	display: flex;
-    justify-content: flex-start;
-    margin: 0px;
-    padding: 0px;
-    width: 100%;
-}
-
-.navCreationAdmin ul li{
-	list-style: none;
-    padding: 0px 20px 0px 0px;
-}
-
-.navCreationAdmin ul li a{
-	text-decoration: none;
-	font-family: 16px 'inter', sans-serif;
-    color: var(--text-color);
-    transition: 300ms;
-}
-
-.navCreationAdmin ul li a:hover {
-	color: var(--hover-color);
-    transition: 300ms;
-}
-
-.navCreationAdmin ul li .active {
-	color: var(--active-color);
-}
-
-.contentCreativAdmin {
-    padding: 20px 60px 40px 60px;
-}
-
-.creationArticleAdmin{
+.posts{
     width: 1000px;
     margin: 20px auto 40px auto;
 }
   
-.creationArticleAdmin thead td:nth-child(1) {
+.posts thead td:nth-child(1) {
     width: 5%;
 }
 
-.creationArticleAdmin thead td:nth-child(2) {
+.container thead td:nth-child(2) {
     width: 12%;
 }
 
-.creationArticleAdmin thead td:nth-child(3) {
+.posts thead td:nth-child(3) {
     width: 48%;
 }
 
-.creationArticleAdmin thead td:nth-child(4) {
+.posts thead td:nth-child(4) {
     width: 10%;
 }
 
-.creationArticleAdmin thead td:nth-child(5) {
+.posts thead td:nth-child(5) {
     width: 25%;
 }
 
@@ -109,70 +97,75 @@ thead td {
 
 
 
-@media only screen and (max-width: 1200px){
+@media only screen and (max-width: 1100px){
 
-    .creationArticleAdmin .table .actions{
+    .container {
+        width: 770px;
+    }
+
+    .posts .table .actions{
         flex-direction: column;
     }
-    .creationArticleAdmin{
+    .posts{
         width: 660px;
         margin: 20px auto 40px auto;
     }
 
-    .creationArticleAdmin thead td:nth-child(1) {
+    .posts thead td:nth-child(1) {
         width: 8%;
     }
 
-    .creationArticleAdmin thead td:nth-child(2) {
+    .posts thead td:nth-child(2) {
         width: 12%;
     }
 
-    .creationArticleAdmin thead td:nth-child(3) {
+    .posts thead td:nth-child(3) {
         display: 30%;
     }
 
-    .creationArticleAdmin thead td:nth-child(4) {
+    .posts thead td:nth-child(4) {
         display: none;
     }
-    .creationArticleAdmin tbody td:nth-child(4) {
+    .posts tbody td:nth-child(4) {
         display: none;
     }
 
-    .creationArticleAdmin thead td:nth-child(5) {
+    .posts thead td:nth-child(5) {
         width: 13%;
     }
 }
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 770px){
 
-    .contentCreativAdmin {
+    .container {
         padding: 20px 10px 40px 10px;
+        width: 425px;
     }
 
     .table .actions{
         flex-direction: column;
     }
-    .creationArticleAdmin{
+    .posts{
         width: 360px;
         margin: 20px auto 40px auto;
     }
 
-    .creationArticleAdmin thead td:nth-child(1) {
+    .posts thead td:nth-child(1) {
         width: 14%;
     }
     
-    .creationArticleAdmin thead td:nth-child(2) {
+    .posts thead td:nth-child(2) {
         width: 48%;
     }
     
-    .creationArticleAdmin thead td:nth-child(3) {
+    .posts thead td:nth-child(3) {
         display: none;
     }
-    .creationArticleAdmin tbody td:nth-child(3) {
+    .posts tbody td:nth-child(3) {
         display: none;
     }
     
-    .creationArticleAdmin thead td:nth-child(5) {
+    .posts thead td:nth-child(5) {
         width: 38%;
     }
     
@@ -185,21 +178,13 @@ thead td {
     .btn_primary {
         margin: 1px;
     }
+}
 
-    .text-area {
-        height: 300px;
+@media only screen and (max-width: 425px){
+    .container {
+        width: 100%;
     }
-
-    .contentCreationEdit {
-        width: 350px;
+    .posts{
+        width: auto;
     }
-
-    .contentCreationEdit .image {
-        width: 350px;
-        height: 210px;
-    }
-
-    .contentCreationAdd {
-        width: 350px;
-    } 
 }

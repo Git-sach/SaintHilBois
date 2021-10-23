@@ -1,5 +1,6 @@
 @import url("/style/commun/commun.css");
 @import url("/style/commun/btn.css");
+@import url("/style/commun/card.css");
 
 .container {
     width: 1100px;
@@ -76,6 +77,48 @@
     width: 100px; 
     transition: .5s;
     right: 55px;
+}
+
+.lastPosts {
+    margin: 100px 0px;
+    padding: 5px;
+    background-color: var(--main2);
+    width: 100%;
+}
+
+.lastPosts .cadre{
+    border: 1px solid var(--or);
+}
+
+.lastPosts h1{
+    color: var(--or);
+    font-family: Courier;
+    font-weight: 500;
+    margin: 15px 0px;
+    font-size: 22px;
+    letter-spacing: 3px;
+}
+
+.lastPosts .title {
+    display: flex;
+    justify-content: center;
+}
+
+.lastPosts .title svg {
+    margin: auto 10px;
+    width: 7px;
+}
+
+.lastPosts .cards{
+    display: flex;
+    justify-content: space-around;
+    margin: 0px;
+    padding: 0px;
+    flex-wrap: wrap;
+}
+
+.lastPosts .card{
+    margin: 10px 0px;
 }
 
 @media only screen and (max-width: 1100px){ /**Tablette*/

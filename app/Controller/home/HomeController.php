@@ -8,9 +8,11 @@ class HomeController extends \app\Controller\AppController{
 
     public function __construct(){
         parent::__construct(); //-> appel le constructeur parent
+        $this->loadModel('Post');
     }
 
     public function index(){
-        $this->render('home.index');
+        $posts = $this->Post->LastAccueil();
+        $this->render('home.index', compact('posts'));
     }
 }

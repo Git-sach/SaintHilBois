@@ -13,8 +13,8 @@
 
     <ul class="cards">
         <?php foreach($posts as $post): ?>
-            <a href="<?= $post->URL ?>">
-                <div class="card">
+            <div class="card">  
+                <a href="<?= $post->URL ?>">
                     <img class="imgCard" src=<?= $post->img == null ? "http://via.placeholder.com/200x120" : "imgdata/$post->img"?>>
                     <p class="category"><em><?= $post->category?></em></p>
                     <div class="textCard">
@@ -51,8 +51,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </a>
+                </a>
+            </div>
         <?php endforeach;?>
     </ul>
 </div>

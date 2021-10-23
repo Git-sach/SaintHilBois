@@ -14,13 +14,13 @@
 label{
     font-size: 15px;
     margin-bottom: 15px;
-    color: var(--gray-darker);
+    color: var(--text1);
 }
 
 input, textarea, select {
     padding:10px;
     margin-top: 8px;
-    border:1px solid var(--gray-darker);
+    border:1px solid var(--text1);
     border-radius:1px;
 }
 

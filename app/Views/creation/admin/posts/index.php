@@ -1,16 +1,15 @@
 <link rel="stylesheet" href="style/creation/admin/posts/index.css">
 
-<div class="contentCreativAdmin">
-
-    <div class="navCreationAdmin">
+<div class="container">
+    <div class="nav">
         <ul>
             <li><a class="<?= App::getMenuCreationAdmin() == 'posts' ? 'active' : ''?>" href="?p=creation.admin.posts.index">Articles</a></li>
             <li><a class="<?= App::getMenuCreationAdmin() == 'categories' ? 'active' : ''?>" href="?p=creation.admin.categories.index">Categories</a></li>
         </ul>
     </div>
-    <h1>Administration des <span class="red">Articles</span></h1>
+    <h1> Administration des articles </h1>
 
-    <div class="creationArticleAdmin">
+    <div class="posts">
         <?= $alert ?>
         <div class="space"></div>
         

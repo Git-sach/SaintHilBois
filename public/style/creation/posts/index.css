@@ -4,6 +4,7 @@
 .container {
     width: 1100px;
     margin: 0px auto;
+    padding: 0px 10px;
     display: flex;
     flex-direction: column;
     background: var(--white);
@@ -12,8 +13,7 @@
 .container .cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-content: space-between;
+    justify-content: space-between;
     list-style: none;
     margin: 0px 0px 10px 0px;
     padding: 0;
@@ -21,10 +21,6 @@
 
 .container .hiden {
     display: none;
-}
-
-.container .formCreation {
-    padding-left: 12px;
 }
 
 
@@ -38,7 +34,11 @@
     }
 
     .container .formCreation {
-        padding-left: 23px;
+        padding-left: 18px;
+    }
+
+    .container .cards {
+        justify-content: space-evenly;
     }
 }
 
@@ -50,7 +50,7 @@
     }
 
     .container .formCreation {
-        padding-left: 38px;
+        padding-left: 28px;
     }
 }
 
@@ -58,7 +58,6 @@
 
     .container {
         width: 100%;
-        background-color: var(--main);
     }
 
     .container .cards{
@@ -67,6 +66,6 @@
     }
 
     .container .formCreation {
-        margin: 0px auto 0px auto;
+        padding-left: 10px;
     }
 }
