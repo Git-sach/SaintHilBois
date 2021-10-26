@@ -1,4 +1,4 @@
-nav {
+.menu {
     font-size: medium;
 	display: flex;
     width: 1100px;
@@ -9,7 +9,7 @@ nav {
     z-index: 1;
 }
 
-nav ul{
+.menu ul{
 	display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -18,11 +18,11 @@ nav ul{
     width: 100%;
 }
 
-nav ul li{
+.menu ul li{
 	list-style: none;
 }
 
-nav ul li a{
+.menu ul li a{
 	text-decoration: none;
 	font-family: 16px 'inter', sans-serif;
     color: var(--text1);
@@ -30,7 +30,7 @@ nav ul li a{
     position: relative;
 }
 
-nav ul li a::before, nav ul li .active::before{
+.menu ul li a::before, .menu ul li .active::before{
 	content: '';
     background-color: var(--text1);
     width: 0%;
@@ -39,7 +39,7 @@ nav ul li a::before, nav ul li .active::before{
     transition: 300ms;
 }
 
-nav ul li .notActive:hover::before{
+.menu ul li .notActive:hover::before{
 	content: '';
     background-color: var(--text1);
     width: 100%;
@@ -48,7 +48,7 @@ nav ul li .notActive:hover::before{
     transition: 300ms;
 }
 
-nav ul li .active::before {
+.menu ul li .active::before {
 	content: '';
     background-color: var(--text1);
     width: 100%;
@@ -57,43 +57,43 @@ nav ul li .active::before {
     transition: 300ms;
 }
 
-nav ul .logo{
+.menu ul .logo{
 	width: 70px; 
 }
 
 @media only screen and (max-width: 1100px){
-    nav {
+    .menu {
         width: 770px;
     }
 }
 
 @media only screen and (max-width: 770px){
-    nav {
+    .menu {
         width: 425px;
     }
 
-    nav ul .logo{
+    .menu ul .logo{
         width: 50px; 
     }
 
-    nav ul li a{
+    .menu ul li a{
         font-size: 12px;
     }
 }
 
 @media only screen and (max-width: 650px){
 
-    nav {
+    .menu {
         padding: 12px 22px 14px 22px;
     }
 
-    nav ul{
+    .menu ul{
         justify-content: space-between;
     }
 }
 
 @media only screen and (max-width: 425px){
-    nav {
+    .menu {
         width: 100%;
     }
 }

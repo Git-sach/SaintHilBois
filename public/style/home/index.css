@@ -24,6 +24,7 @@
     height: 480px;
     display: flex;
     padding: 50px;
+    margin: 50px 0px;
 }
 
 .imgMe{
@@ -41,40 +42,42 @@
 
 .textMe p{
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
     margin: 0;
 }
 
-.imgRecipe {
+.Recipe {
+    margin: 150px 0px 30px 0px;
     position: relative;
     filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.25));
 }
 
-.imgRecipe img{
-    width: 100%;
+.Recipe img{
+    width: 70%;
+    margin-left: 15px;
     transition: .5s;
 }
 
-.imgRecipe p{
+.Recipe p{
     position: absolute;
-    top: 20px;
-    right: 60px;
-    font-size: 32px;
-    width: 350px;
+    top: 400px;
+    right: 100px;
+    font-size: 25px;
+    width: 280px;
     color: black;
     font-family: Courier New;
 }
 
-.imgRecipe svg{
+.Recipe svg{
     position: absolute;
-    top: 90px;
-    right: 65px;
-    width: 90px; 
+    top: 460px;
+    right: 120px;
+    width: 60px; 
     transition: .5s;
 }
 
-.imgRecipe a:hover svg{
-    width: 100px; 
+.Recipe a:hover svg{
+    width: 70px; 
     transition: .5s;
     right: 55px;
 }
@@ -138,21 +141,22 @@
         font-size: 20px;
     }
 
-    .imgRecipe p{
-        right: 40px;
-        font-size: 28px;
-        width: 300px;
+    .Recipe p{
+        top: 270px;
+        right: 30px;
+        font-size: 22px;
+        width: 250px;
     }
 
-    .imgRecipe svg{
-        top: 83px;
-        right: 50px;
-        width: 70px; 
+    .Recipe svg{
+        top: 325px;
+        right: 60px;
+        width: 45px; 
     }
 
-    .imgRecipe a:hover svg{
-        width: 80px; 
-        right: 43px; 
+    .Recipe a:hover svg{
+        width: 55px; 
+        right: 30px; 
     }
 }
 
@@ -174,21 +178,30 @@
         font-size: 12px;
     }
 
-    .imgRecipe p{
-        right: 20px;
-        font-size: 14px;
-        width: 160px;
+    .lastPosts {
+        margin: 100px 0px 30px 0px;
     }
 
-    .imgRecipe svg{
-        top: 50px;
+    .Recipe {
+        margin: 30px 0px 30px 0px;
+    }
+    
+    .Recipe p{
+        top: 150px;
+        right: 35px;
+        font-size: 12px;
+        width: 120px;
+    }
+
+    .Recipe svg{
+        top: 178px;
         right: 30px;
-        width: 40px; 
+        width: 30px; 
     }
 
-    .imgRecipe a:hover svg{
-        width: 45px;
-        right: 25px; 
+    .Recipe a:hover svg{
+        width: 40px;
+        right: 10px; 
     }
 }
 
@@ -227,20 +240,20 @@
         padding: 20px 10px;
     }
 
-    .imgRecipe p{
-        top: 2px;
-        right: 5px;
+    .Recipe p{
+        top: 150px;
+        right: 20px;
         font-size: 12px;
         width: 140px;
     }
 
-    .imgRecipe svg{
-        top: 28px;
-        right: 13px;
-        width: 35px; 
+    .Recipe svg{
+        top: 180px;
+        right: 35px;
+        width: 30px; 
     }
 
-    .imgRecipe a:hover svg{
+    .Recipe a:hover svg{
         display: none;
     }
 }
