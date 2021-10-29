@@ -210,6 +210,7 @@
     .container {
         width: 100%;
         background-color: var(--main);
+        box-shadow: none;
     }
 
     .imgIntro {
@@ -240,16 +241,26 @@
         padding: 20px 10px;
     }
 
+    .Recipe {
+        margin: 100px 0px 150px 0px;
+    }
+
+    .Recipe img{
+        width: 100%;
+        margin-left: 0;
+    }
+
     .Recipe p{
-        top: 150px;
-        right: 20px;
+        top: 100%;
+        right: 50px;
+        height: 20px;
         font-size: 12px;
         width: 140px;
     }
 
     .Recipe svg{
-        top: 180px;
-        right: 35px;
+        top: 112%;
+        right: 60px;
         width: 30px; 
     }
 
