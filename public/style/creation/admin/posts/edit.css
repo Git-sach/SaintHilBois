@@ -7,7 +7,7 @@
 
     --cardMain-width: 30%;
     --cardContaine-width: 43%;
-    --cardCaracteristics-width: 25%;
+    --cardStatCarac-width: 25%;
     --cardComments-width: 100%;
 
     --border-radius: 1em;
@@ -120,12 +120,61 @@ body {
 }
 
 
+.flexCards .cardStatCarac {
+    margin: 0;
+    border-radius: var(--border-radius);
+    width: var(--cardStatCarac-width);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.flexCards .cardStatistics {
+    background-color:white;
+    margin: 0;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    width: 100%;
+    height: 20%;
+    overflow: hidden;
+}
+
+.flexCards .cardStatistics svg{
+    margin-right: 10px;
+}
+
+.flexCards .cardStatistics h1 {
+    background-color:var(--title-card-color);
+    padding: 10px;
+    font-size: 14px;
+    color: white;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
 .flexCards .cardCaracteristics {
     background-color:white;
     margin: 0;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
-    width: var(--cardCaracteristics-width);
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+}
+
+.flexCards .cardCaracteristics svg{
+    margin-right: 10px;
+}
+
+.flexCards .cardCaracteristics h1 {
+    background-color:var(--title-card-color);
+    padding: 10px;
+    font-size: 14px;
+    color: white;
+    margin: 0;
+    display: flex;
+    align-items: center;
 }
 
 .contentCreationEdit .btn_primary {
@@ -205,13 +254,21 @@ td {
     :root {
         --cardMain-width: 40%;
         --cardContaine-width: 58.5%;
-        --cardCaracteristics-width: 28.5%;
+        --cardStatCarac-width: 28.5%;
         --cardComments-width: 70%;
 
         --heigt-child1:3%;
         --heigt-child2:10%;
         --heigt-child3:73%;
         --heigt-child5:14%;
+    }
+
+    .flexCards .cardStatistics {
+        height: 100px;
+    }
+    
+    .flexCards .cardCaracteristics {
+        height: 100px;
     }
 
     .cardComments thead td:nth-child(4) {
@@ -233,7 +290,7 @@ td {
     :root {
         --cardMain-width: 100%;
         --cardContaine-width: 100%;
-        --cardCaracteristics-width: 100%;
+        --cardStatCarac-width: 100%;
         --cardComments-width: 100%;
     }
 

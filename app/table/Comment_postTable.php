@@ -11,4 +11,8 @@ class Comment_postTable extends Table{
     public function findComments($id){
         return $this->query('SELECT * FROM ' . $this->table . ' WHERE post_id = ?', [$id]);
     }
+
+    public function countComments($id){
+        return $this->query('SELECT count(*) AS nbr FROM ' . $this->table . ' WHERE post_id = ?', [$id], true);
+    }
 }

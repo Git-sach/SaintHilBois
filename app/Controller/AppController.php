@@ -20,4 +20,8 @@ class AppController extends Controller{
     public function building(){
         $this->render('templates.building');
     }
+
+    public function pagination($nbrPerPage){
+
+    }
 }

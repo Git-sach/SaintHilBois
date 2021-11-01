@@ -80,7 +80,8 @@ class PostsController extends AppController{
         $form = new Form($post);
         $this->loadModel('Comment_post');
         $comments = $this->Comment_post->findComments($_GET['id']);
-        $this->render('creation.admin.posts.edit', compact('categories', 'form', 'post', 'comments'));
+        $nbrComments = $this->Comment_post->countComments($_GET['id']);
+        $this->render('creation.admin.posts.edit', compact('categories', 'form', 'post', 'comments', 'nbrComments'));
     }
 
     public function delete(){

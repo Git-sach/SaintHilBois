@@ -23,6 +23,35 @@
     display: none;
 }
 
+.navigation {
+    display: flex;
+    justify-content: space-evenly;
+    width: 200px;
+    margin: 10px auto 30px auto;
+}
+.navigation a svg{
+    fill: var(--text1);
+}
+
+.navigation p, .navigation a{
+    margin: 0;
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--text1);
+    padding: 10px 15px;
+    transition: .5s;
+}
+
+.navigation p{
+    background-color: var(--main);
+    border-radius: 4px;
+}
+
+.navigation a:hover svg, .navigation a:hover{
+    transform: translateY(-3px);
+    transition: .5s;
+}
+
 
 @media only screen and (max-width: 1100px){
     .container {
