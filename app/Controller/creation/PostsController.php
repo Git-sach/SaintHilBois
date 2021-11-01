@@ -53,13 +53,25 @@ class PostsController extends \app\Controller\AppController{
             }
         }
         else {
-            $pagePlus = "<a href='/index.php?p=creation.posts.index&page=2'>$svgPlus</a>";
-            $plus1 = "<a href='/index.php?p=creation.posts.index&page=2'> 2 </a>";
+            if($nbrPages>1){
+                $pagePlus = "<a href='/index.php?p=creation.posts.index&page=2'>$svgPlus</a>";
+                $plus1 = "<a href='/index.php?p=creation.posts.index&page=2'> 2 </a>";
+            }
+            else{
+                $pagePlus = '';
+                $plus1 = '';
+            }
             $pageMoins = '';
             $moins1 = '';
             $page = 1;
         }
-        $courant = "<p>" . $page . "</p>";
+
+        if($nbrPages>1){
+            $courant = "<p>" . $page . "</p>";
+        }
+        else{
+            $courant = '';
+        }
 
         $posts = $this->Post->PaginationPosts($nbrPerPage, $nbrPerPage*($page-1));
 
