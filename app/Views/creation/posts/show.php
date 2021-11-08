@@ -29,17 +29,17 @@
             </div>
         </div>
     </div>
-    <div class="content">
+    <div class="content reveal">
         <?php $json = '{"json": "' . $post->content . '"}';
         ?>
         <p><?= $post->decodeJson($post->content) ?></p>
     </div>
 
-    <div class="contentTitle">
+    <div class="contentTitle reveal">
         <p class="Title">VOUS AIMEREZ AUSSI</p>
     </div>
 
-    <div class="trioCard">
+    <div class="trioCard reveal">
         <ul class="cards">
             <?php foreach($cards as $card): ?>
                 <div class="card">
@@ -85,11 +85,11 @@
         </ul>
     </div>
 
-    <div class="contentTitle">
+    <div class="contentTitle reveal">
         <p class="Title">LESSEZ UN COMMENTAIRE</p>
     </div>
 
-    <div class="commenteSpace">
+    <div class="commenteSpace reveal">
         <form method="post">
             <input required type="text" class="text-input" name="name" placeholder="Votre nom">
             <input required type="text" class="text-input" name="mail" placeholder="Votre mail">
@@ -98,3 +98,4 @@
         </form>   
     </div>
 </div>
+<script type="text/javascript" src="javaScript/scrollReveal.js"></script>

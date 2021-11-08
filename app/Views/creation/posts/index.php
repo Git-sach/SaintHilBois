@@ -13,7 +13,7 @@
 
     <ul class="cards">
         <?php foreach($posts as $post): ?>
-            <div class="card">  
+            <div class="card reveal">  
                 <a href="<?= $post->URL ?>">
                     <img class="imgCard" src=<?= $post->img == null ? "http://via.placeholder.com/200x120" : "imgdata/$post->img"?>>
                     <p class="category"><em><?= $post->category?></em></p>
@@ -63,3 +63,4 @@
         <?=$pagePlus?>
     </div>
 </div>
+<script type="text/javascript" src="javaScript/scrollReveal.js"></script>

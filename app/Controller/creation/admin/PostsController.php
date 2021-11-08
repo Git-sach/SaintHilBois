@@ -35,7 +35,7 @@ class PostsController extends AppController{
             //echo $dateNow->format('d-m-Y H:i:s');
             $result = $this->Post->create([
                 'title' => $_POST['title'],
-                'content' => $_POST['content'],
+                'content' => substr(nl2br(htmlentities(json_encode($_POST['content']))),6,-6),
                 'category_id' => $_POST['category_id'],
                 'img' => $_FILES['file']['name']
                 //'date' => $_POST[$dateNow->format('Y-m-d H:i:s')]
