@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="style/creation/posts/show.css">
+<link rel="stylesheet" href="style/commun/scrollReveal.css">
 
 <div class="content">
     <div class="head">
@@ -29,17 +30,17 @@
             </div>
         </div>
     </div>
-    <div class="content reveal">
+    <div class="content reveal-1">
         <?php $json = '{"json": "' . $post->content . '"}';
         ?>
         <p><?= $post->decodeJson($post->content) ?></p>
     </div>
 
-    <div class="contentTitle reveal">
+    <div class="contentTitle reveal-1">
         <p class="Title">VOUS AIMEREZ AUSSI</p>
     </div>
 
-    <div class="trioCard reveal">
+    <div class="trioCard reveal-1">
         <ul class="cards">
             <?php foreach($cards as $card): ?>
                 <div class="card">
@@ -85,11 +86,11 @@
         </ul>
     </div>
 
-    <div class="contentTitle reveal">
+    <div class="contentTitle reveal-1">
         <p class="Title">LESSEZ UN COMMENTAIRE</p>
     </div>
 
-    <div class="commenteSpace reveal">
+    <div class="commenteSpace reveal-1">
         <form method="post">
             <input required type="text" class="text-input" name="name" placeholder="Votre nom">
             <input required type="text" class="text-input" name="mail" placeholder="Votre mail">

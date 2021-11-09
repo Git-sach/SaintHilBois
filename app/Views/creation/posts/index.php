@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="/style/commun/commun.css">
 <link rel="stylesheet" href="/style/commun/form.css">
 <link rel="stylesheet" href="style/creation/posts/index.css">
+<link rel="stylesheet" href="style/commun/scrollReveal.css">
 
 <div class="container">
 
@@ -13,7 +14,7 @@
 
     <ul class="cards">
         <?php foreach($posts as $post): ?>
-            <div class="card reveal">  
+            <div class="card reveal-1">  
                 <a href="<?= $post->URL ?>">
                     <img class="imgCard" src=<?= $post->img == null ? "http://via.placeholder.com/200x120" : "imgdata/$post->img"?>>
                     <p class="category"><em><?= $post->category?></em></p>
