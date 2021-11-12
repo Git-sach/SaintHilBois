@@ -12,6 +12,7 @@
     --or: #F4E187;
 
     --text1: #505D68;
+    --text2: #879bad;
 
     /*btn*/
     --green-darker: #228a3a;
@@ -46,6 +47,37 @@ body {
     margin: 0px;
 }
 
-p, h1 {
+@font-face {
+	font-family: "mvboli";
+	src: url('fonts/mvboli.ttf');
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "lato-normal";
+	src: url('fonts/lato/Lato-Regular.ttf');
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "lato-lighter";
+	src: url('fonts/lato/Lato-Thin.ttf');
+	font-weight: lighter;
+}
+
+@font-face {
+	font-family: "lato-bold";
+	src: url('fonts/lato/Lato-Bold.ttf');
+	font-weight: bolder;
+}
+
+p, h1, h2, a {
+    font-family: 'lato-normal';
+}
+
+h1, h2 {
     color: var(--text1);
+}
+p, a {
+    color: var(--text2);
 }

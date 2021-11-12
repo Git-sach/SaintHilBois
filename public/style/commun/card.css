@@ -15,6 +15,13 @@
     height: 250px;
     transition: .5s;
     position: relative;
+    transition: .5s;
+}
+
+.card:hover .imgCard{
+    transform: scale(1.02);
+    filter: sepia(20%);
+    transition: .5s;
 }
 
 .category{

@@ -1,4 +1,4 @@
-const ratio = .5
+const ratio = .1
 const options = {
     root: null,
     rootMargin: '0px',
@@ -11,7 +11,7 @@ const handleIntersect = function (entries, observer){
             entry.target.classList.add('reveal-visible')
             observer.unobserve(entry.target)
         }
-        console.log(entry.intersectionRatio)
+        //console.log(entry.intersectionRatio)
     })
 }
 
