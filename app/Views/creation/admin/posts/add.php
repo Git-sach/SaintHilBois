@@ -17,6 +17,10 @@
                 Configuration
             </h1>
             <div class="content">
+                <img id="preview" src="http://via.placeholder.com/200x120" accept="image/*"
+                class="image"
+                alt="Image">
+
                 <div class="selectImg">
                     <label for="file" class="label-file">
                         <svg width="629" height="567" viewBox="0 0 629 567" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -24,7 +28,8 @@
                         </svg>
                         Choisir une image
                     </label>
-                    <input class="input-file" type="file" id="file" name="file">
+                    <input class="input-file" type="file" id="file" name="file" onchange="previewImage()">
+                    <!-- onchange="" -->
                 </div>
 
                 <?= $form->input('title', 'Titre de l\'article') ?>
@@ -69,3 +74,4 @@
         <button class="btn_primary">Sauvegarder</button>
     </form>
 </div> 
+<script type="text/javascript" src="javaScript/onloadImg.js"></script>

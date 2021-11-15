@@ -17,7 +17,7 @@
                 Configuration
             </h1>
             <div class="content">
-                <img src=<?= $post->img == null ? "http://via.placeholder.com/200x120" : "imgdata/$post->img"?>
+                <img id="preview" src=<?= $post->img == null ? "http://via.placeholder.com/200x120" : "imgdata/$post->img"?>
                 class="image"
                 alt="Image">
 
@@ -28,7 +28,7 @@
                         </svg>
                         Choisir une image
                     </label>
-                    <input class="input-file" type="file" id="file" name="file">
+                    <input class="input-file" type="file" id="file" name="file" onchange="previewImage()">
                 </div>
 
                 <?= $form->input('title', 'Titre de l\'article') ?>
@@ -113,3 +113,4 @@
         <button class="btn_primary">Sauvegarder</button>
     </form>
 </div> 
+<script type="text/javascript" src="javaScript/onloadImg.js"></script>
