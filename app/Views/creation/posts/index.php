@@ -57,11 +57,7 @@
         <?php endforeach;?>
     </ul>
     <div class="navigation">
-        <?=$pageMoins?>
-        <?=$moins1?>
-        <?=$courant?>
-        <?=$plus1?>
-        <?=$pagePlus?>
+        <?=$pagination?>
     </div>
 </div>
 <script type="text/javascript" src="javaScript/scrollReveal.js"></script>

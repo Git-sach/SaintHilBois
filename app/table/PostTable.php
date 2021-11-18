@@ -21,14 +21,22 @@ class PostTable extends Table{
         ORDER BY articles.date DESC");
     }
 
-    public function PaginationPosts($limit, $offset){
-        return $this->query("
+    public function postsLimitCat($limit, $offset, $category = null){
+        
+        $select = "
         SELECT articles.id, articles.title, content, date, categories.title as category, img 
         FROM articles 
         LEFT JOIN categories 
-            ON category_id = categories.id
-        ORDER BY articles.date DESC 
-        LIMIT " . $limit . " OFFSET " . $offset);
+            ON category_id = categories.id";
+        if($category !== null){
+            $where = " WHERE category_id = " . $category;
+        }else{
+            $where = "";
+        }
+        $limit = " ORDER BY articles.date DESC 
+        LIMIT " . $limit . " OFFSET " . $offset;
+
+        return $this->query($select . $where . $limit);
     }
 
     public function lastByCategory($id){
@@ -57,9 +65,14 @@ class PostTable extends Table{
         ORDER BY articles.date DESC LIMIT 6");
     }
 
-    public function nbrPosts(){
-        return $this->query("
+    public function nbrPosts($category = null){
+        $query = "
         SELECT COUNT(*) AS nbr
-        FROM articles", null, true);
+        FROM articles";
+
+        if($category !== null){
+            $query .= " WHERE category_id=" . $category;
+        }
+        return $this->query($query, null, true);
     }
 }

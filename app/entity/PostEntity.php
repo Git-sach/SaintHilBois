@@ -17,5 +17,4 @@ class PostEntity extends Entity{
         //$html .= '<form method="post" action="' . $this->getURL() . '"><p><button class="btnCard">Voir la suite..</button></p></form>';
         return $html;
     }
-
 }

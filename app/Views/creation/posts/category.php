@@ -12,7 +12,7 @@
     </form>
 
     <ul class="cards">
-        <?php foreach($articles as $post): ?>
+        <?php foreach($posts as $post): ?>
             <div class="card">
                 <a href="<?= $post->URL ?>">
                     <img class="imgCard" src=<?= $post->img == null ? "http://via.placeholder.com/200x120" : "imgdata/$post->img"?>>
@@ -55,4 +55,7 @@
             </div>
         <?php endforeach;?>
     </ul>
+    <div class="navigation">
+        <?=$pagination?>
+    </div>
 </div>
