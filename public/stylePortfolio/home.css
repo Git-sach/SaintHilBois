@@ -1,0 +1,171 @@
+@import url("/stylePortfolio/commun/commun.css");
+
+html, body, .body {
+	height: 100%;
+    margin: 0;
+}
+
+body {
+    position: relative;
+    overflow: hidden;
+}
+
+.body {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #282C2F;
+    margin: 0;
+    padding: 0px 2% 0px 2%;
+    width: 100%;
+    transition: left 1s;
+}
+
+.bodyNavOpen {
+    left: -300px;
+    transition: 1s;
+    transition-timing-function: var(--transitionOpenNav);
+}
+
+nav {
+    /* border: 1px solid #D1E1EE; */
+    color: var(--colorTextAcueil);
+    font-family: 'lato-light';
+    display: flex;
+    padding: 20px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    /* border: 1px solid #D1E1EE; */
+    width: 60%;
+    justify-content: space-between;
+    padding: 0;
+}
+
+nav .logoNav {
+    width: 30px;
+    margin: auto 10px auto auto;
+}
+
+.containe {
+    display: flex;
+	height: calc(100% - 92px);
+}
+
+.description {
+    width: 50%;
+    margin: auto 0 auto 0;
+    /* border: 1px solid #D1E1EE; */
+}
+
+.description h1 {
+    font-size: 80px;
+    letter-spacing: 0.27em;
+    margin-top: 0;
+}
+
+.description p {
+    font-size: 31px;
+}
+
+.description a {
+    text-decoration: none;
+    color: #D16D15;
+}
+
+.image {
+    width: 50%;
+    /* border: 1px solid #D1E1EE; */
+    display: flex;
+    justify-content: right;
+    position: relative;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    object-fit: contain;
+    object-position: 50% 0%;
+}
+
+.image svg {
+    position: absolute;
+    top: 10%;
+    right: 8%;
+    width: 90%; 
+    z-index: 0;
+}
+
+@media screen and (max-width: 1440px) {
+
+    .description h1 {
+        font-size: 65px;
+    }
+    
+    .description p{
+        font-size: 21px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    .description h1 {
+        font-size: 45px;
+    }
+
+    .description p, nav{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .description h1 {
+        font-size: 30px;
+    }
+
+    .description p, nav{
+        font-size: 13px;
+    }
+
+    nav ul {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 630px) {
+
+    html, body, .body {
+        height: auto;
+    }
+
+    nav ul{
+        display: none;
+    }
+
+    .containe {
+        flex-direction: column-reverse;
+        height: auto;
+    }
+
+    .description {
+        width: 100%;
+        text-align: center;
+        padding: 20px 0px;
+    }
+
+    .image {
+        width: 100%;
+    }
+    
+    .image svg {
+        position: absolute;
+        top: 10%;
+        right: 0%;
+        width: 100%; 
+        z-index: 0;
+    }
+}

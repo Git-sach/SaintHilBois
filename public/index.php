@@ -92,3 +92,15 @@ elseif($page === 'creation.admin.categories.index'){
     $controller->building(); /* provisoir */
 
 }
+
+/**
+ * MYPORTFOLIO
+ */
+elseif($page === 'myportfolio.home'){
+    $controller = new \MyPortfolio\Controller\home\HomeController();
+    $controller->home();
+}
+
+else{
+    echo '404 page introuvable';
+}

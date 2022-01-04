@@ -13,6 +13,10 @@ class PostsController extends AppController{
     private $alert;
     private $url = 'index.php?p=creation.admin.posts.index';
 
+    private $HTMLpagination;
+    private $right = '>';
+    private $left = '<';
+
     public function __construct(){
         parent::__construct();
         $this->loadModel('Post');
@@ -21,7 +25,11 @@ class PostsController extends AppController{
     public function index(){
         $posts = $this->Post->all();
         $alert = $this->alert;
-        $this->render('creation.admin.posts.index', compact('posts', 'alert'));
+
+        $pagination = $this->pagination(9);
+        $posts = $this->HTMLpagination;
+
+        $this->render('creation.admin.posts.index', compact('posts', 'alert', 'pagination'));
     }
 
     public function add(){
@@ -42,7 +50,8 @@ class PostsController extends AppController{
             ]);
             if($result){
                 $this->alert = App::getInstance()->alert('alert_success', $this->url, 'Article bien ajouté!');
-                return $this->index();
+                //return $this->index();
+                header('Location: \\' . $this->url);
             }
         }
         $this->loadModel('Category');
@@ -72,7 +81,8 @@ class PostsController extends AppController{
             ]);
             if($result){
                 $this->alert = App::getInstance()->alert('alert_primary', $this->url, 'Article bien sauvegardé!');
-                return $this->index(); //redirexion vers index
+                //return $this->index(); //redirexion vers index
+                header('Location: \\' . $this->url);
             }
         }
         $this->loadModel('Category');
@@ -92,8 +102,83 @@ class PostsController extends AppController{
                 unlink("imgdata/$post->img");
             }
             $this->alert = App::getInstance()->alert('alert_danger', $this->url, 'Article bien suprimé!');
-            return $this->index();
+            //return $this->index();
+            header('Location: \\' . $this->url);
         }
+    }
+
+    public function pagination($nbrPerPage, $perCategory = false){    
+
+        //refaire le $_GET sans le param 'page'
+        $param = "?";
+        foreach($_GET as $key=>$value){
+            if($key === 'p'){
+                $param .= $key . "=" . $value;
+            }else{
+                if($key !== 'page'){
+                    $param .= "&" . $key . "=" . $value;
+                }
+            }
+        }
+
+        $href = "/index.php" . $param . "&page=";
+
+        if($perCategory !== false){
+            $nbrPosts = $this->Post->nbrPosts($perCategory);
+        }else{
+            $nbrPosts = $this->Post->nbrPosts();
+        }
+        $nbrPages = ceil($nbrPosts->nbr / $nbrPerPage);     
+        
+        if(isset($_GET['page'])) {
+            $page = $_GET['page'];
+            $plus = $page+1;
+            $moins = $page-1;
+            if($page<$nbrPages){
+                $pagePlus = "<a href='" . $href . $plus . "'> $this->right </a>";
+                $plus1 = "<a href='" . $href . $plus . "'>" . $plus . "</a>";
+            }
+            else{
+                $pagePlus = '';
+                $plus1 = '';
+            }
+            if($page>1){
+                $pageMoins = "<a href='" . $href. $moins . "'> $this->left </a>";
+                $moins1 = "<a href='" . $href. $moins . "'>" . $moins . "</a>";
+            }
+            else{
+                $pageMoins = '';
+                $moins1 = '';
+            }
+        }
+        else {
+            if($nbrPages>1){
+                $pagePlus = "<a href='" . $href . "2'> $this->right </a>";
+                $plus1 = "<a href='" . $href . "2'> 2 </a>";
+            }
+            else{
+                $pagePlus = '';
+                $plus1 = '';
+            }
+            $pageMoins = '';
+            $moins1 = '';
+            $page = 1;
+        }
+
+        if($nbrPages>1){
+            $courant = "<p>" . $page . "</p>";
+        }
+        else{
+            $courant = '';
+        }
+
+        if($perCategory === false){
+            $this->HTMLpagination = $this->Post->postsLimitCat($nbrPerPage, $nbrPerPage*($page-1));
+        }else{
+            $this->HTMLpagination = $this->Post->postsLimitCat($nbrPerPage, $nbrPerPage*($page-1), $perCategory);
+        }
+
+        return $pageMoins . $moins1 . $courant . $plus1 . $pagePlus;
     }
 
 }

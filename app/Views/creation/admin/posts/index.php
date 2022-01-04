@@ -49,4 +49,7 @@
             </tbody>
         </table>
     </div>
+    <div class="navigation">
+        <?=$pagination?>
+    </div>
 </div>

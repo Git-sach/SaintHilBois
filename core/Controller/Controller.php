@@ -28,4 +28,8 @@ class Controller{
     protected function login(){
         header('Location: index.php?p=login');
     }
+
+    protected function getUrlMois1(){
+        return $_SERVER['HTTP_REFERER'];
+    }
 }

@@ -24,6 +24,8 @@ class App{
         app\Autoloader::register();
         require ROOT . '/core/Autoloader.php';
         core\Autoloader::register();
+        require ROOT . '/MyPortfolio/Autoloader.php'; //MyPortfolio
+        MyPortfolio\Autoloader::register(); //MyPortfolio
     }
 
     //Factory
