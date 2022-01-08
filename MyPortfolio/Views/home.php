@@ -22,9 +22,9 @@
         <a href="#">En savoir plus</a>
     </div>
     <div class="image">
-        <svg viewBox="0 0 782 595" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- <svg viewBox="0 0 782 595" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M424.572 0.363725C601.651 -14.711 836.597 443.328 770.627 531.458C704.657 619.587 77.2806 625.386 9.61414 489.132C-58.0524 352.879 247.494 15.4384 424.572 0.363725Z" fill="#D16D15" fill-opacity="0.59"/>
-        </svg>
-        <img src="stylePortfolio/img/Me.png">
+        </svg> -->
+        <img src="stylePortfolio/img/me.png">
     </div>
 </div>

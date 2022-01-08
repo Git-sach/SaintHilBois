@@ -17,6 +17,7 @@ document.querySelector('.logoNav').onclick = function(){
     else{
         body.add('bodyNavOpen'); 
         navbar.add('NavOpen');
+        //document.querySelector('.navbar').style.display = "initial"
     }
         
 };

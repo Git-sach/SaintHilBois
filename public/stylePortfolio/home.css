@@ -84,19 +84,10 @@ nav .logoNav {
 }
 
 .image img {
-    width: 100%;
-    height: auto;
-    z-index: 1;
-    object-fit: contain;
-    object-position: 50% 0%;
-}
-
-.image svg {
-    position: absolute;
-    top: 10%;
-    right: 8%;
-    width: 90%; 
-    z-index: 0;
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    object-position: 50% 0;
 }
 
 @media screen and (max-width: 1440px) {
@@ -111,6 +102,7 @@ nav .logoNav {
 }
 
 @media screen and (max-width: 1024px) {
+
 
     .description h1 {
         font-size: 45px;
@@ -139,7 +131,16 @@ nav .logoNav {
 @media screen and (max-width: 630px) {
 
     html, body, .body {
-        height: auto;
+        height: initial;
+    }
+
+    body{
+        overflow: initial;
+    }
+
+    .navbar {
+        overflow-x: hidden;
+        position: fixed; /**A mettre pour grand ecrnt aussi ?*/
     }
 
     nav ul{
@@ -148,24 +149,24 @@ nav .logoNav {
 
     .containe {
         flex-direction: column-reverse;
-        height: auto;
+        padding: 0 10%;
     }
 
-    .description {
+    .description h1 {
+        margin-top: 300px;
+    }
+
+    .image img {
         width: 100%;
-        text-align: center;
-        padding: 20px 0px;
     }
 
     .image {
         width: 100%;
     }
-    
-    .image svg {
-        position: absolute;
-        top: 10%;
-        right: 0%;
-        width: 100%; 
-        z-index: 0;
+
+    .description {
+        width: 100%;
+        text-align: justify;
+        padding: 20px 0px;
     }
 }
