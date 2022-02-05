@@ -5,26 +5,35 @@ html, body, .body {
     margin: 0;
 }
 
+footer {
+    display: none;
+}
+
 body {
     position: relative;
     overflow: hidden;
 }
 
 .body {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #282C2F;
-    margin: 0;
-    padding: 0px 2% 0px 2%;
-    width: 100%;
-    transition: left 1s;
+    background-color: #EAEAEA;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
-.bodyNavOpen {
-    left: -300px;
-    transition: 1s;
-    transition-timing-function: var(--transitionOpenNav);
+h1, h2, p, a {
+    color: var(--colorTextAcueil);
+}
+
+.navbar {
+    background-color: var(--colorNavBar);
+}
+
+.navbar ul li a{
+    color: var(--colorTextAcueil);
+}
+
+.logoNav svg{
+    fill: var(--colorTextAcueil);
 }
 
 nav {
@@ -44,11 +53,6 @@ nav ul {
     padding: 0;
 }
 
-nav .logoNav {
-    width: 30px;
-    margin: auto 10px auto auto;
-}
-
 .containe {
     display: flex;
 	height: calc(100% - 92px);
@@ -56,23 +60,40 @@ nav .logoNav {
 
 .description {
     width: 50%;
-    margin: auto 0 auto 0;
-    /* border: 1px solid #D1E1EE; */
+    margin: 8% 0 0 0;
+    padding-right: 60px;
+}
+
+.description .right{
+    text-align: end;
+    white-space:nowrap;
 }
 
 .description h1 {
-    font-size: 80px;
+    font-size: 48px;
     letter-spacing: 0.27em;
-    margin-top: 0;
+    margin: 0;
+}
+
+.description .firstName{
+    margin-bottom: 30px;
+}
+
+.description .lastName{
+    margin-right: 60px;
 }
 
 .description p {
-    font-size: 31px;
+    font-size: 30px;
+    margin-right: 140px;
 }
 
-.description a {
+.description .seeMore{
     text-decoration: none;
-    color: #D16D15;
+    color: #4B6051;
+    position: absolute;
+    left: 5%;
+    bottom: 5%;
 }
 
 .image {
@@ -88,16 +109,17 @@ nav .logoNav {
     width: auto;
     object-fit: cover;
     object-position: 50% 0;
+    padding-bottom: 20px;
 }
 
 @media screen and (max-width: 1440px) {
 
     .description h1 {
-        font-size: 65px;
+        font-size: 48px;
     }
     
     .description p{
-        font-size: 21px;
+        font-size: 30px;
     }
 }
 
@@ -105,11 +127,11 @@ nav .logoNav {
 
 
     .description h1 {
-        font-size: 45px;
+        font-size: 38px;
     }
 
     .description p, nav{
-        font-size: 15px;
+        font-size: 25px;
     }
 }
 
@@ -138,22 +160,43 @@ nav .logoNav {
         overflow: initial;
     }
 
-    .navbar {
-        overflow-x: hidden;
-        position: fixed; /**A mettre pour grand ecrnt aussi ?*/
-    }
-
-    nav ul{
+    nav{
         display: none;
     }
 
     .containe {
         flex-direction: column-reverse;
-        padding: 0 10%;
+        margin-bottom: 62px;
+    }
+
+    .description {
+        width: 100%;
+        text-align: justify;
+        padding: 20px 0px;
+        margin: 40px 0 80px 0;
+    }
+
+    .description .right{
+        text-align: center;
+    }
+
+    .description .lastName, .description .firstName{
+        margin: 20px 0;
     }
 
     .description h1 {
-        margin-top: 300px;
+        text-align: center;
+        padding: 0 10%;
+        font-size: 38px;
+    }
+    .description p {
+        margin: 0;
+        padding: 0 10%;
+        font-size: 21px;
+    }
+    .description a {
+        padding: 0 10%;
+        font-size: 21px;
     }
 
     .image img {
@@ -162,11 +205,5 @@ nav .logoNav {
 
     .image {
         width: 100%;
-    }
-
-    .description {
-        width: 100%;
-        text-align: justify;
-        padding: 20px 0px;
     }
 }

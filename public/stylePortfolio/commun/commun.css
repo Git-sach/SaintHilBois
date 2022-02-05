@@ -23,15 +23,18 @@
 }
 
 :root{
-	--colorTextAcueil: #D1E1EE;
+	--colorText: #282C2F;
+	--colorTextAcueil: #282C2F;
 	--transitionOpenNav: cubic-bezier(0.4, 0, 0.2, 1);
+	--cardColor: #F3F3F3;
+	--colorNavBar: #7f9f884d;
 }
 
 * {
     box-sizing: border-box;
 }
 
-h1, h2, p, a {
+h1, h2, p, a, li{
     font-family: 'lato-light';
-    color: var(--colorTextAcueil);
+    color: var(--colorText);
 }

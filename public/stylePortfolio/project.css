@@ -1,0 +1,185 @@
+@import url("/stylePortfolio/commun/commun.css");
+
+.body {
+	background: url(img/back.png);
+    background-size: cover;
+    background-position: center 40px;
+}
+
+.title {
+    text-align: center;
+    font-size: 52px;
+    letter-spacing: 0.27em;
+    margin-bottom: 80px;
+}
+
+.imgProject {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.imgProject img{
+    width: 80%;
+    height: auto;
+}
+
+.resum {
+    margin-top: 80px;
+    padding-left: 80px;
+    width: 80%;
+}
+
+.resum h1{
+    font-size: 52px;
+    font-family: 'lato-lighter';
+}
+
+.resum p{
+    font-size: 24px;
+    line-height: 35px;
+}
+
+button {
+  background-color: transparent;
+  border: 1px solid #000000;
+  border-radius: 3px;
+  padding: 12px 32px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.triad {
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 80px;
+}
+
+.triad .element {
+    /* border: 1px solid #000000; */
+    width: 300px;
+    padding: 20px;
+}
+
+.triad .element svg {
+    height: 100px;
+}
+.triad .element h1 {
+    font-family: 'lato-lighter';
+}
+
+.triad .element p {
+    text-align: justify;
+}
+
+.description {
+    margin-top: 80px;
+    display: flex;
+    /* border: 1px solid #D1E1EE; */
+}
+
+.description .list{
+    /* border: 1px solid #D1E1EE; */
+    width: 50%;
+}
+.description .list ul{
+    margin: 0;
+    height: 100%;
+    /* border: 1px solid #D1E1EE; */
+    list-style: none;
+    font-family: 'lato-light';
+    font-size: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.description .list ul li::before{
+    content: "";
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    border-radius: 100%;
+    background: #B6D4DB;
+    margin-right: 20px;
+}
+
+.description .image {
+    text-align: center;
+    width: 50%;
+    /* border: 1px solid #D1E1EE; */
+}
+
+.description .image img{
+    width: 70%;
+}
+
+@media screen and (max-width: 768px) {
+
+    .title {
+        font-size: 42px;
+    }
+
+    .imgProject img{
+        width: 90%;
+    }
+    
+    .resum {
+        margin-top: 60px;
+        padding-left: 40px;
+        width: 90%;
+    }
+
+    .resum h1{
+        font-size: 48px;
+    }
+    
+    .resum p{
+        font-size: 21px;
+    }
+    
+    .description {
+        flex-direction: column;
+    }
+
+    .description .list{
+        width: 100%;
+    }
+
+    .description .list ul li{
+        margin-bottom: 30px;
+    }
+    
+    .description .image {
+        width: 100%;
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 630px) {
+
+    .title {
+        margin-top: 30px;
+        font-size: 30px;
+    }
+
+    .imgProject img{
+        width: 99%;
+    }
+    
+    .resum {
+        margin-top: 60px;
+        padding-left: 20px;
+        width: 99%;
+    }
+
+    .resum h1{
+        font-size: 42px;
+    }
+    
+    .resum p{
+        font-size: 16px;
+        line-height: 25px;
+    }
+}

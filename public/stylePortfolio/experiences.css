@@ -1,0 +1,221 @@
+@import url("/stylePortfolio/commun/commun.css");
+
+.title {
+    text-align: center;
+    font-size: 52px;
+    letter-spacing: 0.27em;
+    margin-bottom: 80px;
+}
+
+.container {
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+.container .cardContainer {
+    /* border: 1px solid #444444; */
+    width: 1000px;
+    margin-bottom:200px;
+    display: flex;
+}
+.container .cardContainer .card{
+    width: 88%;
+    background-color: var(--cardColor);
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.25);
+    display: flex;
+    position: relative;
+}
+
+.container .cardContainer .left{
+    width: 50%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container .cardContainer .left img{
+    transform: translateY(-10%);
+    margin: 0 auto;
+    width: 90%;
+    filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.25));
+}
+
+.container .cardContainer .left svg{
+    margin: 0 auto 20px 20px;
+    height: 100px;
+}
+
+.container .cardContainer .right{
+    width: 50%;
+    text-align: left; 
+    padding: 2% 3% 2% 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container .cardContainer .right h1{
+    margin: 0;
+    font-size: 24px;
+}
+.container .cardContainer hr{
+    border: none;
+    height: 0.5px;
+    background-color: #4444442f;
+}
+.container .cardContainer .right p{
+    text-align: justify;
+    font-size: 14px; 
+    margin: 10px 0;
+}
+
+.container .cardContainer .right ul {
+    list-style-type: "✔ ";
+    list-style-position: inside;
+    padding-left: 10px;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.container .cardContainer .right ul li {
+    margin-bottom: 8px;
+    text-align: justify;
+}
+
+.container .cardContainer .right .techno{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .cardContainer .seemore{
+    position: absolute;
+    bottom: 0%;
+    /* transform:translateY(50%); */
+    left: 44%;
+    transform:translate(-50%, 50%);
+    display: none;
+}
+
+.container .cardContainer .time{
+    /* border: 1px solid #444444; */
+    width: 12%;
+    transform: translateX(10px);
+}
+
+.container .cardContainer .time .nbr{
+    font-size: 125px;
+    margin: 0;
+    font-family: 'lato-bold';
+    line-height: 60px;
+    margin-top: 12px;
+    opacity: 7%;
+}
+.container .cardContainer .time .periode{
+    font-size: 125px;
+    font-family: 'lato-bold';
+    transform: rotate(90deg);
+    opacity: 7%;
+    margin: 30px 0px 0px auto;
+    /* line-height: 40px; */
+}
+
+@media screen and (max-width: 1024px) {
+    .container .cardContainer .right h1{
+        font-size: 24px;
+    }
+    .container .cardContainer .right p{
+        font-size: 14px;
+    }
+    .container .cardContainer .time .nbr{
+        font-size: 100px;
+    }
+    .container .cardContainer .time .periode{
+        font-size: 100px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .title {
+        font-size: 42px;
+        margin-bottom: 20px;
+    }
+
+    .container .cardContainer {
+        width: 98%;
+        margin-bottom: 80px;
+    }
+
+    .container .cardContainer .card{
+        flex-direction: column;
+        position: relative;
+        width: 100%;
+    }
+
+    .container .cardContainer .left{
+        width: 100%
+    }
+
+    .container .cardContainer .left img{
+        width: 98%;
+    }
+    
+    .container .cardContainer .left svg{
+        height: 40px;
+        width: auto;
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        margin: 0;
+    }
+    
+    .container .cardContainer .right{
+        transform: translateY(-10%);
+        width: 100%;
+        padding: 2% 5% 40px 5%;
+    }
+
+    .container .cardContainer .right h1{
+        font-size: 26px;
+    }
+    .container .cardContainer .right p{
+        font-size: 16px;
+    }
+
+    .container .cardContainer .right .techno{
+        margin-top: 10px;
+    }
+
+    .container .cardContainer .right .techno svg{
+        width: 35px;
+    }
+
+    .container .cardContainer .time{
+        display: none; /**provisoir*/
+    }
+
+    .container .cardContainer .seemore{
+        width: 100px;
+        left: 50%;
+    }
+}
+
+@media screen and (max-width: 630px) {
+
+    .title {
+        margin-top: 30px;
+        font-size: 23px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    .container .cardContainer .right h1{
+        margin-top: 40px;
+    }
+    
+}

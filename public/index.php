@@ -100,6 +100,18 @@ elseif($page === 'myportfolio.home'){
     $controller = new \MyPortfolio\Controller\home\HomeController();
     $controller->home();
 }
+elseif($page === 'myportfolio.skills'){
+    $controller = new \MyPortfolio\Controller\skills\SkillsController();
+    $controller->skills();
+}
+elseif($page === 'myportfolio.experiences'){
+    $controller = new \MyPortfolio\Controller\experiences\ExperiencesController();
+    $controller->experiences();
+}
+elseif($page === 'myportfolio.project'){
+    $controller = new \MyPortfolio\Controller\project\ProjectController();
+    $controller->project();
+}
 
 else{
     echo '404 page introuvable';

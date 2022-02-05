@@ -1,0 +1,24 @@
+footer {
+    text-align: center;
+    height: 400px;
+    position: relative;
+}
+
+footer .contain {
+    position: absolute;
+    top: 40%; /* poussé de la moitié de hauteur du référent */
+    left: 50%;
+    transform: translateX(-50%); /* tiré de la moitié de sa propre hauteur */
+    display: flex;
+    flex-direction: column;
+}
+
+.annee {
+    justify-content: center;
+    display: flex;
+}
+
+.annee p{
+    margin: 0;
+    opacity: .5;
+}
