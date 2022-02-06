@@ -9,7 +9,9 @@
     </div>
     <div class="resum">
         <h1>Pourquoi ce projet ?</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>Quoi de mieux que d’exprimenter, de chercher, d’échouer, de corriger pour apprendre ? Webach est un site internet qui a pour principal but de me permettre de pratiquer sur des technologies sur lesquelles j’aime travailler et sur lesquelles je veux monter en compétence.</p>
+        <p>Bien qu’il soit en premier lieux créé à une fin pédagogique, ce site sert désormais le réel besoin d’une personne qui s’est lancé récemment  dans la patisserie (d’ou sont design). Cela donne une toute nouvelle dimension à ce projet. En effet, le cahier des charges qui était auparavant le mien se voit prendre des directions que je n’avais pas envisagé, rendant le projet d’autant plus challengeant et interessant.</p>
+        <p>N’hésitez pas à aller faire un tour sur Webach et vous faire votre propre avis sur ce projet.</p>
         <button onclick="window.location.href='https://webach.fr'">Découvrir</button>
     </div>
     <div class="triad">
@@ -37,7 +39,7 @@
                 </defs>
             </svg>
             <h1>Blog</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>Webach est un site qui prend la forme d’un blog. Il a pour but de présenter le travail de son utilisateur.</p>
         </div>
         <div class="element">
             <svg width="181" height="181" viewBox="0 0 181 181" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -60,7 +62,7 @@
                 </defs>
             </svg>
             <h1>Administrable</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>Le site est entièrement administrable avec un espace dédié. Il est possible de créer / modifier / supprimer du contenu à convenance.</p>
         </div>
         <div class="element">
             <svg width="181" height="181" viewBox="0 0 181 181" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -75,17 +77,17 @@
                 <path d="M79.64 94.1201L86.88 101.36L23.53 166.52L12.67 155.66L79.64 94.1201Z" fill="#D7DCDE"/>
                 <path d="M79.4138 94.1201L83.0338 97.7401L13.575 165.615L8.14502 160.185L79.4138 94.1201Z" fill="#F7F7F7"/>
             </svg>
-            <h1>Apprendre</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <h1>Pédagogique</h1>
+            <p>Le premier but de ce projet est de pratiquer et d’apprendre sur toutes les étapes qui permettent la création d’un site web dynamique.</p>
         </div>
     </div>
     <div class="description">
         <div class="list">
             <ul>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                <li>Ce projet n’intégre volontairement pas de frameWork, et ce dans le but de comprendre le fonctionnement profond des technologies.</li>
+                <li>Il intégre un maximum de technologies sur lesquelles j’aime apprendre. De la réalisation de la maquette, à la gestion des BBD jusqu’au dévelopement des parties Frontend et backend du site.</li>
+                <li>Il est étudié pour être utilisable sur les principales dimensions d’écrans existants (Ordinateur, Smartphone, portable).</li>
+                <li>Webach est aujourd’hui encore en développement dans le but de répondre au mieux aux besoins de son utilisateur.</li>
             </ul>
         </div>
         <div class="image">

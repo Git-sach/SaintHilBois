@@ -23,11 +23,11 @@
                         <br>L'application est en constante évolution pour répondre au mieux aux nouveaux besoins des éxploitants.
                         <br><br>Les enjeux sur cette mission sont les suivants:</p>
                         <ul>
-                            <li>Définir les axes du projet a implémenter selon le besoin du client et travailler à l’atteinte des objectifs</li>
-                            <li>Etudier de faisabilité et des prioritées des solutions fonctionnelle</li>
-                            <li>Contrôler et suivre la réalisation des cibles fixés</li>
+                            <li>Définir les axes du projet à implémenter selon le besoin du client et travailler à l’atteinte des objectifs</li>
+                            <li>Etudier la faisabilité et les priorités des solutions fonctionnelles</li>
+                            <li>Contrôler et suivre la réalisation des cibles fixées</li>
                         </ul>
-                        <p>Pour répondre au exigences de cette mission, une excellente compréhension fonctionne mais également technique sont demandées.</p>
+                        <p>Répondre aux exigences de cette mission nécessite une excellente compréhension fonctionnelle mais également technique.</p>
                 </div>
                 <div class="techno">
                     <svg width="40" height="40" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -165,11 +165,10 @@
                 <div class="text">
                     <h1>Developpeur Web</h1>
                     <hr>
-                    <p> STMicroelectronics utilise une application nomé PCSA pour organiser la production des circuits électoniques a base de plaques semiconducteur. 
-                        <br><br>Cette application permet d’optimiser le mapping pour la découpe du waffer et a définir les point de métrologies pour veiller au bon fonctionement des circuit élctroniques. 
+                    <p> STMicroelectronics utilise une application nommée PCSA pour organiser la production des circuits électoniques à base de plaques semiconducteur.
+                        <br><br>Cette application permet d’optimiser le mapping pour la découpe du waffer et à définir les point de métrologies pour veiller au bon fonctionnement des circuits électroniques. 
                         <br><br>Avec l’évoluton des téchnologies et la minaturisation des composant, les besoin auquel doit répondre l’application évolue. 
-                        <br>PCSA est une application web codé principalement en Java EE pour la partie IHM et en Pro C pour la partie back-end. 
-                        Elle comunique avec une base de donnée SQL Oracle.</p>
+                        <br>PCSA est une application web codée principalement en Java EE pour la partie IHM et en Pro C pour la partie back-end. Elle communique avec une base de donnée SQL Oracle.</p>
                 </div>
                 <div class="techno">
                     <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -257,12 +256,12 @@
                 <div class="text">
                     <h1>Recherche en microelectronique</h1>
                     <hr>
-                    <p> Dans la course au développement des capteurs d’image aux caractéristiques à la fois toujours plus performants et plus petits, STMicroelectronics s’impose comme un acteur majeur de l’inovation
-                        <br><br>Le sujet de mon étude portait sur l’analyse et la caractérisation physique et géométrique d’une structure innovant d’un capteur d’images de type CMOS. Étude qui a pour finalité de proposer un produit technologiquement simple, reproductible et fonctionnel. 
+                    <p>Dans la course au développement des capteurs d’image aux caractéristiques à la fois toujours plus performants et plus petits, STMicroelectronics s’impose comme un acteur majeur de l’innovation.
+                        <br><br>Le sujet de mon étude portait sur l’analyse et la caractérisation physique et géométrique d’une structure innovante d’un capteur d’images de type CMOS. Étude qui a pour finalité de proposer un produit technologiquement simple, reproductible et fonctionnel. 
                         <br><br>Pour parvenir à une solution fonctionnelle, ma mission s’est basée sur l’optimisation de trois paramètres clefs :
                         </p>
                         <ul>
-                            <li>Capacité de stockage maximal</li>
+                            <li>Capacité de stockage maximale</li>
                             <li>Transfert optimal de l’information </li>
                             <li>Bruit dû au champ électrique minimum </li>
                         </ul>

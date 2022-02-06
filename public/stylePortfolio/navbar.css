@@ -3,8 +3,8 @@
     height: 100%;
     width: 250px;
     /* background-color: #F9F9F9; */
-    background-color: var(--colorNavBar);
-    box-shadow: inset 5px 0px 15px rgba(0, 0, 0, 0.25);
+    background-color: var(--colorNavBar1);
+    box-shadow: inset 5px 0px 15px rgba(0, 0, 0, 0.10);
     position: absolute;
     top: 0;
     right: -250px;
@@ -36,7 +36,7 @@
     list-style: none;
     color: var(--colorTextAcueil);
     /* font-family: 'lato-regular'; */
-    text-shadow: hsl(206, 8%, 17%, 10%) 8px 3px;
+    /* text-shadow: hsl(206, 8%, 17%, 10%) 8px 3px; */
 }
 
 .logoNav {

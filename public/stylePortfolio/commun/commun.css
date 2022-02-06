@@ -27,7 +27,8 @@
 	--colorTextAcueil: #282C2F;
 	--transitionOpenNav: cubic-bezier(0.4, 0, 0.2, 1);
 	--cardColor: #F3F3F3;
-	--colorNavBar: #7f9f884d;
+	--colorNavBar1: #F9F9F9;
+	--colorNavBar2: #7f9f884d;
 }
 
 * {
