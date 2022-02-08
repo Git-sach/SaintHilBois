@@ -14,3 +14,28 @@
     transition: 1s;
     transition-timing-function: var(--transitionOpenNav);
 }
+
+.firstBar{
+    transition: 1s;
+}
+.rotFirstBar{
+    transform: translate(10px, 1px) rotate(45deg);
+    transition: 1s;
+}
+
+.secondBar{
+    opacity: 1;
+    transition: 0.5s;
+}
+.removeSecondBar{
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.thirdBar{
+    transition: 1s;
+}
+.rotThirdBar{
+    transform: translate(-18px, 11px) rotate(-45deg);
+    transition: 1s;
+}
