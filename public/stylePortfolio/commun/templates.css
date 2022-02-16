@@ -1,4 +1,12 @@
 
+/* body{
+    overflow:hidden;
+} */
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
 .body {
     position: absolute;
     top: 0;
@@ -15,27 +23,66 @@
     transition-timing-function: var(--transitionOpenNav);
 }
 
-.firstBar{
-    transition: 1s;
+/*Transitions entre pages**/
+
+.transitionInStart {
+    background-color: #7f9f88;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    z-index: 3;
 }
-.rotFirstBar{
-    transform: translate(10px, 1px) rotate(45deg);
+
+.transitionInEnd {
+    left: 0%;
     transition: 1s;
 }
 
-.secondBar{
-    opacity: 1;
-    transition: 0.5s;
-}
-.removeSecondBar{
-    opacity: 0;
-    transition: 0.5s;
+.transitionOutStart {
+    background-color: #7f9f88;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    z-index: 4;
+    transition: 1s;
+    box-shadow: 20px 0px 40px rgba(0, 0, 0, 0.15);
 }
 
-.thirdBar{
-    transition: 1s;
+.transitionOutEnd {
+    left: 0%;
 }
-.rotThirdBar{
-    transform: translate(-18px, 11px) rotate(-45deg);
-    transition: 1s;
+
+.transition_Layer2_Out_Start{
+    background-color: #7f9f88af;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    z-index: 3;
+    transition: 1.2s;
+    box-shadow: 20px 0px 40px rgba(0, 0, 0, 0.15);
+}
+
+.transition_Layer2_Out_End {
+    left: 0%;
+}
+
+.transition_Layer3_Out_Start{
+    background-color: #7f9f889f;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    z-index: 2;
+    transition: 1.4s;
+}
+
+.transition_Layer3_Out_End {
+    left: 0%;
 }

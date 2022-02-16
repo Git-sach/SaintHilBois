@@ -2,15 +2,15 @@
 .navbar {
     height: 100%;
     width: 250px;
-    /* background-color: #F9F9F9; */
     background-color: var(--colorNavBar1);
     box-shadow: inset 5px 0px 15px rgba(0, 0, 0, 0.10);
-    position: absolute;
+    /* position: absolute; */
     top: 0;
     right: -250px;
     transition: right 1s;
     overflow-x: hidden;
     position: fixed;
+    z-index: 1;
 }
 
 .NavOpen {
@@ -44,5 +44,30 @@
     position: fixed;
     top: 20px;
     right: 20px;
-    z-index: 1;
+    z-index: 2;
+}
+
+.firstBar{
+    transition: 1s;
+}
+.rotFirstBar{
+    transform: translate(10px, 1px) rotate(45deg);
+    transition: 1s;
+}
+
+.secondBar{
+    opacity: 1;
+    transition: 1s;
+}
+.removeSecondBar{
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.thirdBar{
+    transition: 1s;
+}
+.rotThirdBar{
+    transform: translate(-18px, 11px) rotate(-45deg);
+    transition: 1s;
 }
