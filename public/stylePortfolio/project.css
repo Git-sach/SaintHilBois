@@ -173,7 +173,7 @@ button {
     
     .resum {
         margin-top: 60px;
-        padding-left: 20px;
+        padding-left: 0px;
         width: 99%;
     }
 
@@ -184,5 +184,9 @@ button {
     .resum p{
         font-size: 16px;
         line-height: 25px;
+    }
+
+    .description .list ul{
+        padding-left: 0px;
     }
 }

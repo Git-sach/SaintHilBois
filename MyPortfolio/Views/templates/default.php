@@ -47,7 +47,7 @@
                 <li><a href="/index.php?p=myportfolio.experiences">EXPERIENCES</a></li>
                 <li><a href="/index.php?p=myportfolio.skills">COMPETENCES</a></li>
                 <li><a href="/index.php?p=myportfolio.project">PROJET</a></li>
-                <li><a href="#">CONTACT</a></li>
+                <li><a href="/index.php?p=myportfolio.contact">CONTACT</a></li>
             </ul>
         </div>
         <div class="transitionInStart">

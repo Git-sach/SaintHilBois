@@ -112,6 +112,10 @@ elseif($page === 'myportfolio.project'){
     $controller = new \MyPortfolio\Controller\project\ProjectController();
     $controller->project();
 }
+elseif($page === 'myportfolio.contact'){
+    $controller = new \MyPortfolio\Controller\contact\ContactController();
+    $controller->contact();
+}
 
 else{
     echo '404 page introuvable';
