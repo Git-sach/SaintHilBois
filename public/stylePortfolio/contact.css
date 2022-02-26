@@ -48,3 +48,15 @@ input[type=submit] {
     cursor: pointer;
     width: 200px;
   }
+
+  @media screen and (max-width: 630px) {
+
+    .title {
+        margin-top: 30px;
+        font-size: 23px;
+    }
+
+    .container{
+        width: 100%;
+    }
+}

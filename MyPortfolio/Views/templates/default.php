@@ -10,12 +10,7 @@
         <title> My Portfolio </title>
     </head>
     <body>
-        <div class="transitionOutStart transitionOutEnd">
-        </div>
-        <div class="transition_Layer2_Out_Start transition_Layer2_Out_End">
-        </div>
-        <div class="transition_Layer3_Out_Start transition_Layer3_Out_End">
-        </div>
+        <script type="text/javascript" src="stylePortfolio/javaScript/pageTransitionOut.js"></script>
         <div class="body">
             <div class="logoNav">
                 <svg fill="#282C2F" viewBox="0 0 46 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -53,6 +48,6 @@
         <div class="transitionInStart">
         </div>
         <script type="text/javascript" src="stylePortfolio/javaScript/navbar.js"></script>
-        <script type="text/javascript" src="stylePortfolio/javaScript/pageTransition.js"></script>
+        <script type="text/javascript" src="stylePortfolio/javaScript/pageTransitionIn.js"></script>
     </body>
 </html>
