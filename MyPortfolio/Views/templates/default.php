@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="stylePortfolio/navbar.css">
         <link rel="stylesheet" href="stylePortfolio/commun/templates.css">
         <link rel="stylesheet" href="stylePortfolio/commun/footer.css">
+        <link rel="stylesheet" href="stylePortfolio/commun/commun.css">
         <title> My Portfolio </title>
     </head>
     <body>

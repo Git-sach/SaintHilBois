@@ -22,7 +22,13 @@ for(i=0; i< liensSide.length; i++){
                 window.location.href = lienclic
             }, 1000)
         }
-        else(window.location.href = lienclic)
+        else{
+            body.remove('bodyNavOpen'); 
+            navbar.remove('NavOpen');
+            setTimeout(function(){
+                window.location.href = lienclic
+            }, 800)
+        }
     })
 }
 
